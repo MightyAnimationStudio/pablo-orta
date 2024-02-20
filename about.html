@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Orta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+  </head>
+  <body>
+    <header>
+      <h1>PABLO ORTA</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="./about.html">About </a>
+        </li>
+        <li>
+          <a href="./index.html">Selected Work</a>
+        </li>
+        <li>
+          <a href="./commercial.html">Commercial work</a>
+        </li>
+        <li>
+          <a href="./contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <main>
+        <p>An award-winning writer, director, and editor hailing from Guadalajara, México, Pablo Orta has showcased his films in over 50 local and international film festivals. His debut feature film, <b>'Goya'</b>, clinched the titles of 'Best Director' and 'Best Film' at the Oklahoma Latino Film Festival, in addition to securing the audience prize at FICG 37. </p>
+        <p>Over the last 8 years, he has served as the Creative Director and offline editor at Mighty Animation. During this time, he has collaborated with renowned clients, including Cartoon Network, Disney, Lucasfilm, Netflix, and Nickelodeon. Notably, Pablo wrote, directed, and edited <b>'The Secret Life of Your Mind,'</b> which premiered on HBO-MAX LATAM in late 2023. </p>
+        <ul class="ack-list">
+          <li>
+            <h3>Acknowledgements</h3>
+          </li>
+          <li>Goya | Best Director - Oklahoma Cine Latino Film Festival</li>
+          <li>Goya | Best Feature - Oklahoma Cine Latino Film Festival</li>
+          <li>Goya | Best Script - Ensenada International Film Festival</li>
+          <li>Goya | Best Mexican Feature - Ensenada International Film Festival</li>
+          <li>Goya | Audience Prize - FICG 37</li>
+          <li>Not It | Audience Prize - FICG 29</li>
+          <li>Not It | YouTube audience award - The Wrap Shortlist</li>
+        </ul>
+      </main>
+    </div>
+      <footer class="footer">&copy; 2024 Pablo Orta </footer>
+
+  </body>
+<script>
+  const currentPath = window.location.pathname;
+  const links = document.querySelectorAll('nav a');
+
+  links.forEach(link => {
+    if (link.href.includes(currentPath)) {
+      link.classList.add('current');
+    }
+  });
+</script>
+</html>

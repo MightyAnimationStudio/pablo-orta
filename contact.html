@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Orta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+
+  </head>
+  <body>
+    <header>
+      <h1>PABLO ORTA</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="./about.html">About </a>
+        </li>
+        <li>
+          <a href="./index.html">Selected Work</a>
+        </li>
+        <li>
+          <a href="./commercial.html">Commercial work</a>
+        </li>
+        <li>
+          <a href="./contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <main style="width:60vh">
+        <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+          <p>For any enquiries use the contact form below<br><br>
+		<label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+            <button type="send" style="outline: 1px solid white; ">Submit</button>
+        </form>
+      </main>
+    </div>
+    
+      <footer class="footer">&copy; 2024 Pablo Orta </footer>
+    
+  </body>
+<script>
+  const currentPath = window.location.pathname;
+  const links = document.querySelectorAll('nav a');
+
+  links.forEach(link => {
+    if (link.href.includes(currentPath)) {
+      link.classList.add('current');
+    }
+  });
+</script>
+</html>

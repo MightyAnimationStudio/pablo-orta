@@ -1,0 +1,243 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background: #002733;
+  color: white;
+display: flex;
+  min-height: 100vh; /* Ensures full viewport height */
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Center the menu items horizontally */
+  padding: 10px;
+  height: auto;
+}
+
+nav li {
+  list-style: none;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 20px;
+}
+
+nav a:hover {
+  outline: 2px solid #fff; /* White outline on hover */
+  margin: 0; /* Ensure margins don't shift */
+}
+
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+padding: 20px;
+}
+
+.current {
+  outline: 2px solid #fff; /* White outline on hover */
+  margin: 0; /* Ensure margins don't shift */
+  list-style: none;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 20px;
+  }
+
+nav li.current:hover  {
+outline: none;
+
+}
+main {
+  text-align: left;
+  width: 70%;
+  padding: 10px 20px;
+  margin: 0 30px;
+  font-size: 18px;
+min-height: 70vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+}
+
+.ack-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ack-list li:not(:first-child) {
+  font-style: italic;
+  color: gray;
+}
+.ack-list h3 {
+  margin-bottom: 0; /* or margin-top: 0; */
+}
+
+
+
+.footer {
+ align-self: flex-end;
+padding-right: 15px;
+  padding-bottom: 10px;
+}
+
+
+.contact-form {
+  /* Style container for overall layout */
+  padding: 10px; /* Reduce padding by half */
+  border-radius: 5px; /* Optional rounded corners */
+  background-color: #f2f2f2; /* Optional background color */
+  max-width: 250px; /* Reduce width by half */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.field-group {
+  /* Style individual field groups */
+  margin-bottom: 7.5px; /* Reduce margin by half */
+}
+
+label {
+  /* Style labels */
+  display: block;
+  margin-bottom: 2.5px; /* Reduce margin by half */
+}
+
+input,
+textarea {
+  /* Style text input fields */
+  display: block;
+  width: 100%;
+  padding: 5px; /* Reduce padding by half */
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+textarea {
+  /* Adjust textarea height as needed */
+  height: 75px; /* Reduce height by half */
+}
+
+
+button {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+button:hover {
+  /* Change button color on hover */
+  background-color: transparent;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+padding-bottom: 70px;
+}
+
+.image-container {
+  margin: 10px;
+  position: relative;
+}
+
+.image-container img {
+  width: 300px;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3,
+.overlay p {
+  color: white;
+  text-align: left;
+  padding: 20px;
+}
+
+.modal {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  z-index: 999;
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  animation: animatezoom 0.3s;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 80vw;
+  height: 95vh;
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.close-modal {
+  display: none; /* Hides the close button */
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: #ccc;
+  text-decoration: none;
+}
+
+#my-video {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

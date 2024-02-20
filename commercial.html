@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Orta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<style>
+button {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 300px;
+  position: absolute;
+  top: 0;
+}
+</style>
+  </head>
+  <body>
+    <header>
+      <h1>PABLO ORTA</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="./about.html">About </a>
+        </li>
+        <li>
+          <a href="./index.html">Selected Work</a>
+        </li>
+        <li>
+          <a href="./commercial.html">Commercial work</a>
+        </li>
+        <li>
+          <a href="./contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="gallery">
+      <div class="image-container">
+        <img src="notit.png" alt="Image 1">
+        <div class="overlay">
+          <p>Description of Image 5</p>
+          <p>Description of Image 5</p>
+          <h3>Image 5 Title</h3>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="notit.png" alt="Image 2">
+        <div class="overlay">
+          <p>Description of Image 5</p>
+          <p>Description of Image 5</p>
+          <h3>Image 5 Title</h3>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="notit.png" alt="Image 3">
+        <div class="overlay">
+          <p>Description of Image 5</p>
+          <p>Description of Image 5</p>
+          <h3>Image 5 Title</h3>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="notit.png" alt="Image 4">
+        <div class="overlay">
+          <p>Description of Image 5</p>
+          <p>Description of Image 5</p>
+          <h3>Image 5 Title</h3>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="notit.png" alt="Image 5">
+        <div class="overlay">
+          <p>Description of Image 5</p>
+          <p>Description of Image 5</p>
+          <h3>Image 5 Title</h3>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="notit.png" alt="Image 6">
+        <div class="overlay">
+          <p>Description of Image 5</p>
+          <p>Description of Image 5</p>
+          <h3>Image 5 Title</h3>
+        </div>
+      </div>
+    </div>
+
+      <footer class="footer">&copy; 2024 Pablo Orta </footer>
+ 
+  </body>
+<script>
+  const currentPath = window.location.pathname;
+  const links = document.querySelectorAll('nav a');
+
+  links.forEach(link => {
+    if (link.href.includes(currentPath)) {
+      link.classList.add('current');
+    }
+  });
+</script>
+</html>
