@@ -80,6 +80,7 @@ min-height: 70vh;
 .ack-list li:not(:first-child) {
   font-style: italic;
   color: gray;
+  line-height: 35px;
 }
 .ack-list h3 {
   margin-bottom: 0; /* or margin-top: 0; */
