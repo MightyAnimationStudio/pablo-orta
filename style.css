@@ -34,7 +34,7 @@ nav li {
 }
 
 nav a:hover {
-  outline: 2px solid #fff; /* White outline on hover */
+  outline: 1px solid #fff; /* White outline on hover */
   margin: 0; /* Ensure margins don't shift */
 }
 
@@ -48,7 +48,7 @@ padding: 20px;
 }
 
 .current {
-  outline: 2px solid #fff; /* White outline on hover */
+  outline: 1px solid #fff; /* White outline on hover */
   margin: 0; /* Ensure margins don't shift */
   list-style: none;
   display: inline-block;
