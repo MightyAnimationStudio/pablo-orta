@@ -51,7 +51,6 @@ button {
           <p>IMCINE</p>
           <h3>Goya</h3>
           <button class="play-video" data-video-src="https://storage.googleapis.com/pablo-orta_website/Goya.mp4"></button>
-          <button class="close-video">&times;</button> </div>
         </div>
       </div>
       <div class="image-container">
@@ -137,14 +136,7 @@ button {
         video.pause();
       }
     });
-const closeVideoButtons = document.querySelectorAll(".close-video");
 
-closeVideoButtons.forEach(button => {
-  button.addEventListener("click", function() {
-    videoModal.style.display = "none";
-    video.pause();
-  });
-});
   const currentPath = window.location.pathname;
   const links = document.querySelectorAll('nav a');
 
