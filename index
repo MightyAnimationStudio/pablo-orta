@@ -33,7 +33,7 @@ button {
           <a href="./about">About </a>
         </li>
         <li>
-          <a href="./selected">Selected Work</a>
+          <a href="./index">Selected Work</a>
         </li>
         <li>
           <a href="./commercial">Commercial work</a>
