@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Orta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+
+  </head>
+  <body>
+    <header>
+      <h1>PABLO ORTA</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="./about">About </a>
+        </li>
+        <li>
+          <a href="./index">Selected Work</a>
+        </li>
+        <li>
+          <a href="./commercial">Commercial work</a>
+        </li>
+        <li>
+          <a href="./contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+    <main>
+<span="title"><h1>Goya</h1></span>
+<video width="100%" height="auto" controls>
+  <source src="https://storage.googleapis.com/pablo-orta_website/Goya.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/pablo-orta_website/Goya.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
+        <p>Cesar and Mateo, two brothers struggling with financial problems, try to save their unknown neighbor's ill and aban-
+doned dog Goya despite only having a few days of joy left together. Together with their friend and neighbor Camila,
+they start a journey to rescue Goya from her tragic fate. The brothers have to face difficult decisions that will decide
+the future of their family.</p>
+
+<div class="container">
+  <div class="column left">
+  <ul>
+    <li><i>Feature</i></li>
+	
+    <li><i>Runtime: 87’</i></li>
+  </ul>
+  <ul>
+    <p>Instituto Mexicano de Cinematografía (IMCINE)
+    Fondo para la Producción Cinematográfica de Calidad (FOPROCINE-MÉXICO)</p>
+  </ul>
+
+
+    <ul>
+ <h3>Cast</h3>
+      <li>Eutimio Fuentes</li>
+      <li>Mateo Valles Valdez</li>
+      <li>Ruth Ramos</li>
+    </ul>
+
+    <ul>
+    <h3>Directed by</h3>
+      <li>Pablo Orta</li>
+    </ul>
+
+    <ul>
+    <h3>Produced by</h3>
+      <li>Laura I. Ramírez Ruíz</li>
+      <li>Angélica Sotelo Álvarez</li>
+    </ul>
+
+    <ul>
+    <h3>Executive Producer</h3>
+      <li>José Ramón Mikelajáuregui</li>
+    </ul>
+
+    <ul>
+    <h3>Screenplay by</h3>
+      <li>Pablo Orta</li>
+    </ul>
+
+    <ul>
+    <h3>Cinematography by</h3>
+      <li>Jhasua Camarena Romero</li>
+    </ul>
+
+    <ul>
+    <h3>Production Design by</h3>
+      <li>Paloma Camarena Romero</li>
+    </ul>
+  </div>
+  <div class="column right">
+
+    <ul>
+    <h3>Editing by</h3>
+      <li>Carlos Espinoza Benítez</li>
+      <li>Luis Arturo Cárdenas</li>
+      <li>Pablo Orta</li>
+    </ul>
+
+    <ul>
+    <h3>Music by</h3>
+      <li>Roberto Pérez Centeno</li>
+    </ul>
+
+    <ul>
+    <h3>Hair and Makeup</h3>
+      <li>Karina Hernández</li>
+    </ul>
+
+    <ul>
+    <h3>Praise for Goya</h3>
+      <li>LA Times</li>
+      <li>El Norte</li>
+      <li>IMCINE</li>
+      <li>Gaceta</li>
+    </ul>
+  </div>
+</div>
+
+
+      </main>
+    </div>
+    
+      <footer class="footer">&copy; 2024 Pablo Orta </footer>
+    
+  </body>
+<script>
+  const currentPath = window.location.pathname;
+  const links = document.querySelectorAll('nav a');
+
+  links.forEach(link => {
+    if (link.href.includes(currentPath)) {
+      link.classList.add('current');
+    }
+  });
+</script>
+</html>
