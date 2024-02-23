@@ -6,7 +6,33 @@
     <title>Pablo Orta</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<style>
+	.container {
+  display: flex;
+  flex-direction: row; /* Arranges columns horizontally */
+}
+ul {
+  list-style: none;
+padding:0;
+}
+li {
+  color: gray;
+}
+h3 {
+  margin: 0;
+}
+.column {
+  flex: 1; /* Makes columns share available space equally */
+  padding: 10px;
+padding-left:0;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack columns on small screens */
+  }
+}
 
+</style>  
   </head>
   <body>
     <header>
