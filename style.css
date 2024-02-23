@@ -19,6 +19,12 @@ h1 {
   margin: 0;
 }
 
+.title h1 {
+  font-size: 60px
+    text-transform: uppercase;
+  letter-spacing: 0;
+}
+
 @media only screen and (max-width: 768px) {
   h1 {
     letter-spacing: 0;
