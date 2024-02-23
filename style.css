@@ -20,7 +20,7 @@ h1 {
 }
 
 .title h1 {
-  font-size: 60px
+  font-size: 60px;
     text-transform: uppercase;
   letter-spacing: 0;
 }
