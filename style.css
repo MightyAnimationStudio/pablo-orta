@@ -12,7 +12,9 @@ header {
   text-align: center;
 height: min-content;
 }
-
+a {
+    color: inherit;
+}
 h1 {
   font-size: 100px;
   letter-spacing: 40px;
