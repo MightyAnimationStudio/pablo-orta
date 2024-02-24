@@ -45,17 +45,15 @@
         </ul>
       </main>
     </div>
-      <footer class="footer">&copy; 2024 Pablo Orta </footer>
-
+    <footer class="footer">&copy; 2024 Pablo Orta </footer>
   </body>
-<script>
-  const currentPath = window.location.pathname;
-  const links = document.querySelectorAll('nav a');
-
-  links.forEach(link => {
-    if (link.href.includes(currentPath)) {
-      link.classList.add('current');
-    }
-  });
-</script>
+  <script>
+    const currentPath = window.location.pathname;
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => {
+      if (link.href.includes(currentPath)) {
+        link.classList.add('current');
+      }
+    });
+  </script>
 </html>
