@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Orta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <style>
+      .container {
+        display: flex;
+        flex-direction: row;
+        /* Arranges columns horizontally */
+      }
 
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        color: gray;
+      }
+
+      h3 {
+        margin: 0;
+      }
+
+      .column {
+        flex: 1;
+        /* Makes columns share available space equally */
+        padding: 10px;
+        padding-left: 0;
+        padding-right: 90px;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          /* Stack columns on small screens */
+        }
+
+        .column {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>PABLO ORTA</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="./about">About </a>
+        </li>
+        <li>
+          <a href="./index">Selected Work</a>
+        </li>
+        <li>
+          <a href="./commercial">Commercial work</a>
+        </li>
+        <li>
+          <a href="./contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <main>
+        <span class="title">
+          <h1>Kikiriki</h1>
+        </span>
+        <video width="100%" height="auto" controls>
+          <source src="https://storage.googleapis.com/pablo-orta_website/Kikiriki.mp4" type="video/mp4">
+          <source src="https://storage.googleapis.com/pablo-orta_website/Kikiriki.webm" type="video/webm"> Your browser does not support the video tag.
+        </video>
+        <p>A Mexican rooster comes to serenade a young french Dove in this short film that opened the 2023 Annecy animation film festival. </p>
+        <div class="container">
+          <div class="column left">
+            <ul>
+              <ul>
+                <h3>Executive Producers </h3>
+                <li>Luis Patricio Salmón </li>
+                <li>Claudio Jiménez Palomar </li>
+                <li>Pablo Orta </li>
+              </ul>
+              <ul>
+                <h3>Story by </h3>
+                <li>Ram Tamez</li>
+                <li>Pablo Orta</li>
+              </ul>
+              <ul>
+                <h3>Concept Art </h3>
+                <li>Artie Rodriguez</li>
+                <li>Diego Freyre</li>
+              </ul>
+              <ul>
+                <h3>Art Direction </h3>
+                <li>Artie Rodriguez</li>
+              </ul>
+              <ul>
+                <h3>Line Producer </h3>
+                <li>Pablo Orta</li>
+                <li>Ale Mendoza </li>
+              </ul>
+              <ul>
+                <h3>Editing by </h3>
+                <li>Pablo Orta</li>
+              </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">&copy; 2024 Pablo Orta </footer>
+  </body>
+  <script>
+    const currentPath = window.location.pathname;
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => {
+      if (link.href.includes(currentPath)) {
+        link.classList.add('current');
+      }
+    });
+  </script>
+</html>
