@@ -12,6 +12,10 @@ header {
   text-align: center;
   height: min-content;
 }
+header a {
+    text-decoration: none;
+    color: inherit;
+}
 a {
   color: inherit;
 }
