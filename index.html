@@ -100,28 +100,6 @@
     <footer class="footer">&copy; 2024 Pablo Orta </footer>
   </body>
   <script>
-    const videoModal = document.getElementById("video-modal");
-    const closeModalButton = document.querySelector(".close-modal");
-    const video = document.getElementById("my-video");
-    const playButtons = document.querySelectorAll(".play-video");
-    playButtons.forEach(button => {
-      button.addEventListener("click", function() {
-        videoModal.style.display = "block";
-        video.src = this.dataset.videoSrc; // Use data-video-src attribute
-        video.play();
-      });
-    });
-    closeModalButton.addEventListener("click", function() {
-      videoModal.style.display = "none";
-      video.pause();
-    });
-    // Close modal when clicking outside modal content
-    window.addEventListener("click", function(event) {
-      if (event.target === videoModal) {
-        videoModal.style.display = "none";
-        video.pause();
-      }
-    });
     const currentPath = window.location.pathname;
     const links = document.querySelectorAll('nav a');
     links.forEach(link => {
