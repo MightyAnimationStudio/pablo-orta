@@ -42,6 +42,8 @@ h1 {
     font-size: 18px;
     padding: 10px;
   }
+  nav {
+    text-align: center;
 }
 nav {
   display: flex;
