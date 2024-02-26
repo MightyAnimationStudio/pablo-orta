@@ -33,100 +33,6 @@
         padding-left: 0;
         padding-right: 90px;
       }
-  .play-button {
-    /* Styles for the button */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("https://pablo-orta.com/images/goya.jpg"); /* Replace with your image path */
-    background-repeat: no-repeat;
-    border: none;
-    outline: none;
-    opacity: 0.8; /* Adjust opacity as needed */
-    cursor: pointer;
-    background-size: contain;
-    background-position: center;
-  }
-.video-container {
-  /* Center the video horizontally */
-  margin: 0 auto;
-  /* Add a slight bottom margin */
-  margin-bottom: 20px;
-  
-  /* Adjust width for different screen sizes */
-  @media (max-width: 768px) {
-    width: 90%; /* Adjust width as needed for smaller screens */
-  }
-  
-  @media (min-width: 768px) and (max-width: 1024px) {
-    width: 70%; /* Adjust width as needed for medium screens */
-  }
-  
-  @media (min-width: 1024px) {
-    width: 60%; /* Adjust width as needed for larger screens */
-  }
-}
-
-.video-controls {
-  /* Hide controls by default */
-  display: none;
-  
-  /* Place controls at the bottom center */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  padding: 10px;
-}
-
-.video:hover .video-controls {
-  /* Show controls on hover */
-  display: flex;
-  justify-content: space-between; /* Align controls horizontally */
-  align-items: center; /* Align controls vertically */
-}
-
-.play-button {
-  /* Basic styling for the play button */
-  border: none;
-  background: none;
-  color: white;
-  cursor: pointer;
-  font-size: 20px; /* Adjust as needed */
-}
-
-.play-button:hover {
-  /* Optional hover effect for the play button */
-  color: #ccc; /* Change color on hover */
-}
-
-.progress-bar {
-  /* Progress bar styling */
-  width: 100%;
-  height: 5px; /* Adjust height as needed */
-  background-color: #ccc;
-  position: relative;
-}
-
-.progress-fill {
-  /* Progress bar fill */
-  width: 0%; /* Initial state */
-  height: 100%;
-  background-color: #007bff; /* Blue color */
-  transition: width 0.5s ease-in-out; /* Smooth transition */
-}
-
-/* Optional styling for full screen mode */
-.video:fullscreen {
-  /* Remove margin on body element */
-  margin: 0;
-  /* Set width and height to 100% */
-  width: 100vw;
-  height: 100vh;
-}
       @media (max-width: 768px) {
         .container {
           flex-direction: column;
@@ -166,13 +72,11 @@
         <span class="title">
           <h1>Goya</h1>
         </span>
-<div class="video-container">
+
   <video width="100%" height="auto" controls>
     <source src="https://storage.googleapis.com/pablo-orta_website/Goya.mp4" type="video/mp4">
     <source src="https://storage.googleapis.com/pablo-orta_website/Goya.webm" type="video/webm"> Your browser does not support the video tag.
   </video>
-  <button class="play-button"></button>
-</div>
         <p>Cesar and Mateo, two brothers struggling with financial problems, try to save their unknown neighbor's ill and abandoned dog Goya despite only having a few days of joy left together. Together with their friend and neighbor Camila, they start a journey to rescue Goya from her tragic fate. The brothers have to face difficult decisions that will decide the future of their family.</p>
         <div class="container">
           <div class="column left">
