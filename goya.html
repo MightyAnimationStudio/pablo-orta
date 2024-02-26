@@ -48,6 +48,25 @@
     opacity: 0.8; /* Adjust opacity as needed */
     cursor: pointer;
   }
+      .video-container {
+  /* Center the video horizontally */
+  margin: 0 auto;
+  /* Optional: Add a slight bottom margin */
+  margin-bottom: 20px;
+  
+  /* Adjust width for different screen sizes */
+  @media (max-width: 768px) {
+    width: 90%; /* Adjust width as needed for smaller screens */
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 70%; /* Adjust width as needed for medium screens */
+  }
+  
+  @media (min-width: 1024px) {
+    width: 60%; /* Adjust width as needed for larger screens */
+  }
+}
       @media (max-width: 768px) {
         .container {
           flex-direction: column;
