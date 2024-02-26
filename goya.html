@@ -33,15 +33,21 @@
         padding-left: 0;
         padding-right: 90px;
       }
-        .splash-image {
-  /* Adjust position and style as needed */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; /* Adjust height to fit the video container */
-  object-fit: cover; /* Stretch image to fill container */
-}
+  .play-button {
+    /* Styles for the button */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("path/to/your/splash_image.jpg"); /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    opacity: 0.8; /* Adjust opacity as needed */
+    cursor: pointer;
+  }
       @media (max-width: 768px) {
         .container {
           flex-direction: column;
@@ -82,10 +88,13 @@
           <h1>Goya</h1>
         </span>
         <img src="./images/goya.jpg" alt="Splash image" class="splash-image">
-        <video width="100%" height="auto" controls>
-          <source src="https://storage.googleapis.com/pablo-orta_website/Goya.mp4" type="video/mp4">
-          <source src="https://storage.googleapis.com/pablo-orta_website/Goya.webm" type="video/webm"> Your browser does not support the video tag.
-        </video>
+<div class="video-container">
+  <video width="100%" height="auto" controls>
+    <source src="https://storage.googleapis.com/pablo-orta_website/Goya.mp4" type="video/mp4">
+    <source src="https://storage.googleapis.com/pablo-orta_website/Goya.webm" type="video/webm"> Your browser does not support the video tag.
+  </video>
+  <button class="play-button"></button>
+</div>
         <p>Cesar and Mateo, two brothers struggling with financial problems, try to save their unknown neighbor's ill and abandoned dog Goya despite only having a few days of joy left together. Together with their friend and neighbor Camila, they start a journey to rescue Goya from her tragic fate. The brothers have to face difficult decisions that will decide the future of their family.</p>
         <div class="container">
           <div class="column left">
