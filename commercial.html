@@ -26,6 +26,14 @@
         position: absolute;
         top: 0;
       }
+                // Corrected close modal button styles
+  .close-modal {
+    background-color: red; /* Example color */
+    padding: 5px 10px; /* Adjust padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
     </style>
   </head>
   <body>
@@ -136,22 +144,6 @@
       videoModal.style.display = "none";
       video.pause();
     });
-    // Close modal when clicking outside modal content
-    window.addEventListener("click", function(event) {
-      if (event.target === videoModal) {
-        videoModal.style.display = "none";
-        video.pause();
-      }
-    });
-          // Corrected close modal button styles
-  .close-modal {
-    background-color: red; /* Example color */
-    padding: 5px 10px; /* Adjust padding */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
   // Corrected code for closing the modal on click
   closeModalButton.addEventListener("click", function() {
     videoModal.style.display = "none";
