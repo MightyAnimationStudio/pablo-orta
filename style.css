@@ -37,6 +37,10 @@ font-size: 80px;
   padding-bottom: 30px;
 }
 
+.intro {
+  width: 50vw;
+}
+
 @media only screen and (max-width: 768px) {
   h1 {
     letter-spacing: 0;
