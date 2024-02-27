@@ -285,8 +285,8 @@ button:hover {
 
 .close-video {
   position: absolute;
-  top: 67vh;
-  right: 20vw;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
   padding: 10px;
   background-color: #333;
   color: white;
@@ -297,3 +297,9 @@ button:hover {
   height: 60px;
   width: 80px;
 }
+
+.video-container {
+       position: relative; /* Make the container the reference point */
+     }
+     
+
