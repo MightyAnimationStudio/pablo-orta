@@ -26,13 +26,7 @@
         position: absolute;
         top: 0;
       }
-  .close-modal {
-    background-color: red; /* Example color */
-    padding: 5px 10px; /* Adjust padding */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+
     </style>
   </head>
   <body>
@@ -139,12 +133,6 @@
         video.play();
       });
     });
-  // Corrected code for closing the modal on click
-  closeModalButton.addEventListener("click", function() {
-    videoModal.style.display = "none";
-    video.pause();
-  });
-
   // Corrected code for closing the modal on clicking outside
   window.addEventListener("click", function(event) {
     if (event.target.closest("#video-modal")) {
