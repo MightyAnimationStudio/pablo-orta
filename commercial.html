@@ -143,6 +143,30 @@
         video.pause();
       }
     });
+          // Corrected close modal button styles
+  .close-modal {
+    background-color: red; /* Example color */
+    padding: 5px 10px; /* Adjust padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  // Corrected code for closing the modal on click
+  closeModalButton.addEventListener("click", function() {
+    videoModal.style.display = "none";
+    video.pause();
+  });
+
+  // Corrected code for closing the modal on clicking outside
+  window.addEventListener("click", function(event) {
+    if (event.target.closest("#video-modal")) {
+      // Don't close if clicking within the modal
+      return;
+    }
+    videoModal.style.display = "none";
+    video.pause();
+  });
   </script>
   </body>
 
