@@ -300,6 +300,7 @@ button:hover {
 
 .video-container {
        position: relative; /* Make the container the reference point */
+  height: 100%;
      }
      
 
