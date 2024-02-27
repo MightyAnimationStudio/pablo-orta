@@ -1,148 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pablo Orta - Commercial Work</title>
-    <link rel="stylesheet" href="https://www.pablo-orta.com/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
-      <meta name="description" content="Explore a selection of commerical projects.">
-      <meta name="keywords" content="editor, writer, director, goya, secret life of your mind, mighty animation, pablo orta, animation">
-      <meta property="og:title" content="Pablo Orta - Director and Editor">
-      <meta property="og:description" content="An award-winning writer, director, and editor hailing from Guadalajara, México, Pablo Orta has showcased his films in over 50 local and international film festivals.">
-      <meta name="author" content="Pablo Orta"> <meta name="robots" content="index, follow">
-    <style>
-      button {
-        display: block;
-        width: 100%;
-        padding: 5px;
-        background-color: transparent;
-        color: white;
-        font-weight: bold;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        height: 300px;
-        position: absolute;
-        top: 0;
-      }
-
-    </style>
-  </head>
-  <body>
-    <header>
-      <a href="./index"><h1>PABLO ORTA</h1></a>
-      <span class="subtitle">Director & Editor</span>
-    </header>
-    <nav>
-      <ul>
-        <li>
-          <a href="./about">About </a>
-        </li>
-        <li>
-          <a href="./index">Selected Work</a>
-        </li>
-        <li>
-          <a href="./commercial">Commercial work</a>
-        </li>
-        <li>
-          <a href="./contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="gallery">
-      <div class="image-container">
-        <img src="./images/trolli.png" alt="Trolli">
-        <div class="overlay">
-          <p>Editor</p>
-          <p>Trolli</p>
-          <h3>Sour Brite Crawlers </h3>
-          <button class="play-video" data-video-src="https://storage.googleapis.com/pablo-orta_website/Trolli.mp4 "></button>
-        </div>
-      </div>
-      <div class="image-container">
-        <img src="./images/kip-mapadores.png" alt="Kip and the Mapadores">
-        <div class="overlay">
-          <p>Editor</p>
-          <p>Vidanta</p>
-          <h3>Kipp and the Mapadors</h3>
-          <button class="play-video" data-video-src="https://storage.googleapis.com/pablo-orta_website/Kipp_and_the_Mappadors.mp4"></button>
-        </div>
-      </div>
-      <div class="image-container">
-        <img src="./images/max-steel.png" alt="Max Steel">
-        <div class="overlay">
-          <p>Director / Editor</p>
-          <p>Mattel </p>
-          <h3>Max Steel</h3>
-          <button class="play-video" data-video-src="https://storage.googleapis.com/pablo-orta_website/Max_Steel.mp4"></button>
-        </div>
-      </div>
-      <div class="image-container">
-        <img src="./images/leage-legends.png" alt="League of Legends">
-        <div class="overlay">
-          <p>Editor</p>
-          <p>Riot Games</p>
-          <h3>League of Legends</h3>
-          <button class="play-video" data-video-src="https://storage.googleapis.com/pablo-orta_website/League_of_Legends.mp4"></button>
-        </div>
-      </div>
-      <div class="image-container">
-        <img src="./images/red-bull.png" alt="Red Bull">
-        <div class="overlay">
-          <p>Editor</p>
-          <p>Red Bull</p>
-          <h3>Dirt Conquers</h3>
-          <button class="play-video" data-video-src="https://storage.googleapis.com/pablo-orta_website/Dirt_Conquers.mp4"></button>
-        </div>
-      </div>
-      <div class="image-container">
-        <img src="./images/black-forest.png" alt="Black Forest">
-        <div class="overlay">
-          <p>Editor</p>
-          <p>Black Forest</p>
-          <h3>Juicy Burst</h3>
-          <button class="play-video" data-video-src="https://storage.googleapis.com/pablo-orta_website/Black_Forest.mp4"></button>
-        </div>
-      </div>
-    </div>
-    <div id="video-modal" class="modal">
-      <div class="modal-content">
-        <button class="close-video">Close video</button>
-        <button class="close-modal">&times;</button>
-        <video id="my-video" controls></video>
-      </div>
-    </div>
-    <footer class="footer">&copy; 2024 Pablo Orta </footer>
-      <script>
-    const currentPath = window.location.pathname;
-    const links = document.querySelectorAll('nav a');
-    links.forEach(link => {
-      if (link.href.includes(currentPath)) {
-        link.classList.add('current');
-      }
-    });
-    const videoModal = document.getElementById("video-modal");
-    const closeModalButton = document.querySelector(".close-modal");
-    const video = document.getElementById("my-video");
-    const playButtons = document.querySelectorAll(".play-video");
-    playButtons.forEach(button => {
-      button.addEventListener("click", function() {
-        videoModal.style.display = "block";
-        video.src = this.dataset.videoSrc; // Use data-video-src attribute
-        video.play();
-      });
-    });
-  // Corrected code for closing the modal on clicking outside
-  window.addEventListener("click", function(event) {
-    if (event.target.closest("#video-modal")) {
-      // Don't close if clicking within the modal
-      return;
-    }
-    videoModal.style.display = "none";
-    video.pause();
-  });
-  </script>
-  </body>
-
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Pablo Orta - Commercial Work</title>
+   <link rel="stylesheet" href="https://www.pablo-orta.com/style.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+     <meta name="description" content="Explore a selection of commerical projects.">
+     <meta name="keywords" content="editor, writer, director, goya, secret life of your mind, mighty animation, pablo orta, animation">
+     <meta property="og:title" content="Pablo Orta - Director and Editor">
+     <meta property="og:description" content="An award-winning writer, director, and editor hailing from Guadalajara, México, Pablo Orta has showcased his films in over 50 local and international film festivals.">
+     <meta name="author" content="Pablo Orta"> <meta name="robots" content="index, follow">
+   <style>
+     button {
+       display: block;
+       width: 100%;
+       padding: 5px;
+       background-color: transparent;
+       color: white;
+       font-weight: bold;
+       border: none;
+       border-radius: 4px;
+       cursor: pointer;
+       height: 300px;
+       position: absolute;
+       top: 0;
+     }
+   </style>
+ </head>
+ <body>
+   <header>
+     <a href="./index"><h1>PABLO ORTA</h1></a>
+     <span class="subtitle">Director & Editor</span>
+   </header>
+   <nav>
+     <ul>
+       <li>
+         <a href="./about">About </a>
+       </li>
+       <li>
+         <a href="./index">Selected Work</a>
+       </li>
+       <li>
+         <a href="./commercial">Commercial work</a>
+       </li>
+       <li>
+         <a href="./contact">Contact</a>
+       </li>
+     </ul>
+   </nav>
+   <div class="gallery">
+     <div class="image-container">
+       <img src="./images/trolli.png" alt="Trolli">
+       <div class="overlay">
+         <p>Editor</p>
+         <p>Trolli</p>
+         <h3>Sour Brite Crawlers </h3>
+         <button class="play-video" data-video-src="https://storage.googleapis.com/pablo-orta_website/Trolli.mp4 "></button>
+       </div>
+     </div>
+     <div class="image-container">
+       <img src="./images/kip-mapadores.png" alt="Kip and the Mapadores">
+       <div class="overlay">
+         <p>Editor</p>
+         <p>Vidanta</p>
+         <h3>Kipp and the Mapadors</h3>
+         <button class="play-video" data-video-src="https://storage.googleapis.com/pablo-orta_website/Kipp_and_the_Mappadors.mp4"></button>
+       </div>
+     </div>
+     <div class="image-container">
+       <img src="./images/max-steel.png" alt="Max Steel">
+       <div class="overlay">
+         <p>Director / Editor</p>
+         <p>Mattel </p>
+         <h3>Max Steel</h3>
+         <button class="play-video" data-video-src="https://storage.googleapis.com/pablo-orta_website/Max_Steel.mp4"></button>
+       </div>
+     </div>
+     <div class="image-container">
+       <img src="./images/leage-legends.png" alt="League of Legends">
+       <div class="overlay">
+         <p>Editor</p>
+         <p>Riot Games</p>
+         <h3>League of Legends</h3>
+         <button class="play-video" data-video-src="https://storage.googleapis.com/pablo-orta_website/League_of_Legends.mp4"></button>
+       </div>
+     </div>
+     <div class="image-container">
+       <img src="./images/red-bull.png" alt="Red Bull">
+       <div class="overlay">
+         <p>Editor</p>
+         <p>Red Bull</p>
+         <h3>Dirt Conquers</h3>
+         <button class="play-video" data-video-src="https://storage.googleapis.com/pablo-orta_website/Dirt_Conquers.mp4"></button>
+       </div>
+     </div>
+     <div class="image-container">
+       <img src="./images/black-forest.png" alt="Black Forest">
+       <div class="overlay">
+         <p>Editor</p>
+         <p>Black Forest</p>
+         <h3>Juicy Burst</h3>
+         <button class="play-video" data-video-src="https://storage.googleapis.com/pablo-orta_website/Black_Forest.mp4"></button>
+       </div>
+     </div>
+   </div>
+   <div id="video-modal" class="modal">
+     <div class="modal-content">
+       <button class="close-video">Close video</button>
+       <button class="close-modal">&times;</button>
+       <video id="my-video" controls></video>
+     </div>
+   </div>
+   <footer class="footer">&copy; 2024 Pablo Orta </footer>
+     <script>
+   const currentPath = window.location.pathname;
+   const links = document.querySelectorAll('nav a');
+   links.forEach(link => {
+     if (link.href.includes(currentPath)) {
+       link.classList.add('current');
+     }
+   });
+   const videoModal = document.getElementById("video-modal");
+   const closeModalButton = document.querySelector(".close-modal");
+   const video = document.getElementById("my-video");
+   const playButtons = document.querySelectorAll(".play-video");
+   playButtons.forEach(button => {
+     button.addEventListener("click", function() {
+       videoModal.style.display = "block";
+       video.src = this.dataset.videoSrc; // Use data-video-src attribute
+       video.play();
+     });
+   });
+   // Close modal when clicking outside modal content
+   window.addEventListener("click", function(event) {
+     if (event.target === videoModal) {
+       videoModal.style.display = "none";
+       video.pause();
+     }
+   });
+ </script>
+ </body>
 </html>
