@@ -293,4 +293,6 @@ button:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  z-index: 2;
+  height: 30px;
 }
