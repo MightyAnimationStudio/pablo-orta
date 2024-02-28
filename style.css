@@ -207,7 +207,7 @@ button:hover {
 
 .overlay {
   position: absolute;
-  top: 0;
+  top: 245px;
   left: 0;
   width: 300px;
   height: min-content;
