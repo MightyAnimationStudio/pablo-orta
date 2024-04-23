@@ -302,5 +302,21 @@ button:hover {
        position: relative; /* Make the container the reference point */
   height: 100%;
      }
-     
+
+@media only screen and (max-width: 768px) {
+  .close-video {
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+  height: 50px;
+  width: 60px;
+   }
+   }
 
