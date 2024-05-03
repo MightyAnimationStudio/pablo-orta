@@ -68,8 +68,6 @@ font-size: 80px;
   nav {
     text-align: center;
   }
-}
-
 
 nav {
   display: flex;
@@ -105,7 +103,7 @@ nav a {
 
 .current {
   border-bottom: 1px solid #fff;
-  margin: 0; /* Ensure margins don't shift */
+  margin: 0 5px;
   list-style: none;
   display: inline-block;
   text-transform: uppercase;
