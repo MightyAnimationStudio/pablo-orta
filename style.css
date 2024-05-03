@@ -52,6 +52,8 @@ font-size: 80px;
 .showreel-title h1 {
   font-size: 22px;
   padding-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
 }
   .mobile-reel {
     padding:0;
