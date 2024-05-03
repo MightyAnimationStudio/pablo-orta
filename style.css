@@ -59,7 +59,11 @@ font-size: 80px;
     padding:0;
     width: auto;
 }
+  nav a {
+    font-size: 17px;
   }
+  }
+  
 @media only screen and (max-width: 768px) {
   nav li {
     font-size: 18px;
