@@ -40,7 +40,12 @@ font-size: 80px;
 .intro {
   width: 50vw;
 }
-
+.showreel-title h1 {
+  font-size: 60px;
+  padding-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
 @media only screen and (max-width: 768px) {
   h1 {
     letter-spacing: 0;
