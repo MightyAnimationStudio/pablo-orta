@@ -49,7 +49,10 @@ font-size: 80px;
   .intro {
     width: 100%;
   }
-
+.showreel-title {
+  font-size: 22px;
+  padding-top: 20px;
+}
   .mobile-reel {
     padding:0;
     width: auto;
