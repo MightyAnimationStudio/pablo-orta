@@ -49,7 +49,7 @@ font-size: 80px;
   .intro {
     width: 100%;
   }
-.showreel-title {
+.showreel-title h1 {
   font-size: 22px;
   padding-top: 20px;
 }
