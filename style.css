@@ -85,6 +85,7 @@ nav li {
   display: inline-block;
   text-transform: uppercase;
   padding: 20px;
+  border: 1px solid white;
 }
 
   nav a:hover {
@@ -109,6 +110,8 @@ nav a {
   display: inline-block;
   text-transform: uppercase;
   padding: 20px;
+  background: white;
+  color: initial;
 }
 
 nav li.current:hover {
