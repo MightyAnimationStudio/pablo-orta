@@ -59,11 +59,9 @@ font-size: 80px;
     padding:0;
     width: auto;
 }
-  nav a {
-    font-size: 17px !important;
-  }
-  }
-  
+
+
+    }
 @media only screen and (max-width: 768px) {
   nav li {
     font-size: 18px;
@@ -89,15 +87,17 @@ nav li {
   padding: 20px;
 }
 
-nav a:hover {
+  nav a:hover {
   border-bottom: 1px solid #fff;
-  margin: 0; /* Ensure margins don't shift */
-}
+  margin: 0;
+  background: white;
+  color: initial;
+  }
 
 nav a {
   text-decoration: none;
   color: white;
-  font-size: 25px;
+  font-size: 17px;
   font-weight: bold;
   padding: 20px;
 }
