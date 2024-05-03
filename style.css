@@ -69,8 +69,11 @@ font-size: 80px;
   }
   nav {
     text-align: center;
+    position: sticky;
   }
 }
+
+
 nav {
   display: flex;
   justify-content: center; /* Center the menu items horizontally */
@@ -79,7 +82,6 @@ nav {
 }
 nav ul {
     padding-inline-start: 0;
-  padding-bottom: 20px;
 }
 nav li {
   list-style: none;
