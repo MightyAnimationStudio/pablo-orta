@@ -60,7 +60,7 @@ font-size: 80px;
     width: auto;
 }
   nav a {
-    font-size: 17px;
+    font-size: 17px !important;
   }
   }
   
