@@ -79,6 +79,7 @@ nav {
 }
 nav ul {
     padding-inline-start: 0;
+  padding-bottom: 20px;
 }
 nav li {
   list-style: none;
