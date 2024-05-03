@@ -89,8 +89,6 @@ nav li {
   nav a:hover {
   border-bottom: 1px solid #fff;
   margin: 0;
-  background: white;
-  color: initial;
   }
 
 nav a {
@@ -99,7 +97,6 @@ nav a {
   font-size: 17px;
   font-weight: bold;
   padding: 20px;
-    border: 1px solid white;
 }
 
 .current {
@@ -109,8 +106,6 @@ nav a {
   display: inline-block;
   text-transform: uppercase;
   padding: 20px;
-  background: white;
-  color: initial;
 }
 
 nav li.current:hover {
@@ -124,7 +119,7 @@ main {
   font-size: 18px;
   min-height: 70vh;
 }
-  }
+
 .container {
   display: flex;
   justify-content: center; /* Center content horizontally */
