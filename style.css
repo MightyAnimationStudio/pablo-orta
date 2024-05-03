@@ -106,7 +106,7 @@ nav a {
 
 .current {
   border-bottom: 1px solid #fff;
-  margin: 0 5px;
+  margin: 0;
   list-style: none;
   display: inline-block;
   text-transform: uppercase;
