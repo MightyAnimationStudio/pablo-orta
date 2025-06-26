@@ -136,7 +136,7 @@ main {
 
 .ack-list li:not(:first-child) {
   font-style: italic;
-  color: gray;
+  color: whitesmoke;
   line-height: 35px;
 }
 .ack-list h3 {
