@@ -1,105 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pablo Orta - Showreel</title>
-    <link rel="stylesheet" href="https://www.pablo-orta.com/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
-                  <meta name="description" content="A showreel displaying Pablo Orta's most recent work. ">
-      <meta name="keywords" content="editor, writer, director, goya, secret life of your mind, mighty animation, pablo orta, animation, not it, youtube award">
-      <meta property="og:title" content="Pablo Orta - Director and Editor">
-      <meta property="og:description" content="An award-winning writer, director, and editor hailing from Guadalajara, México, Pablo Orta has showcased his films in over 50 local and international film festivals.">
-      <meta name="author" content="Pablo Orta"> <meta name="robots" content="index, follow">
-    <style>
-      .container {
-        display: flex;
-        flex-direction: row;
-        /* Arranges columns horizontally */
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pablo Orta — Showreel</title>
+  <meta name="description" content="Pablo Orta's 2024 director and editor showreel — featuring work from HBO Max, Cartoon Network, Annecy Film Festival, and international film festivals.">
+  <meta name="keywords" content="pablo orta, showreel, director, editor, reel, 2024">
+  <meta property="og:title" content="Pablo Orta — Showreel">
+  <meta name="author" content="Pablo Orta">
+  <meta name="robots" content="index, follow">
+  <meta property="og:site_name" content="Pablo Orta">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://pablo-orta.com/showreel">
+  <meta property="og:type" content="video.other">
+  <meta property="og:description" content="Pablo Orta's 2024 director and editor showreel — featuring work from HBO Max, Cartoon Network, Annecy Film Festival, and international film festivals.">
+  <meta name="twitter:title" content="Pablo Orta — Showreel 2024">
+  <meta name="twitter:description" content="2024 showreel featuring HBO Max, Cartoon Network, Annecy and festival work.">
+  <meta name="twitter:image" content="https://pablo-orta.com/images/goya.jpg">
+  <link rel="canonical" href="https://pablo-orta.com/showreel">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./style.css">
 
-      ul {
-        list-style: none;
-        padding: 0;
-      }
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Pablo Orta — Showreel 2024",
+  "description": "2024 showreel of Pablo Orta, International Emmy® Award-winning writer, director and editor from Guadalajara, México.",
+  "url": "https://pablo-orta.com/showreel",
+  "contentUrl": "https://storage.googleapis.com/pablo-orta_website/PABLO_ORTA_REEL_2024.mp4",
+  "creator": {
+    "@type": "Person",
+    "name": "Pablo Orta",
+    "@id": "https://pablo-orta.com/#pablo-orta"
+  },
+  "uploadDate": "2024"
+}
+  </script>
+</head>
+<body>
 
-      li {
-        color: gray;
-      }
-
-      h3 {
-        margin: 0;
-      }
-
-      .column {
-        flex: 1;
-        /* Makes columns share available space equally */
-        padding: 10px;
-        padding-left: 0;
-        padding-right: 90px;
-      }
-
-      @media (max-width: 768px) {
-        .container {
-          flex-direction: column;
-          /* Stack columns on small screens */
-        }
-
-        .column {
-          padding-top: 0;
-          padding-bottom: 0;
-        }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>PABLO ORTA</h1>
-            <span class="subtitle">Director & Editor</span>
-    </header>
+  <header>
+    <a href="./index" class="brand">
+      <span class="brand-name">Pablo Orta</span>
+      <span class="brand-sub">Director &amp; Editor</span>
+    </a>
     <nav>
       <ul>
-        <li>
-          <a href="./showreel">Showreel </a>
-        </li>
-        <li>
-          <a href="./index">Selected Work</a>
-        </li>
-        <li>
-          <a href="./commercial">Commercial work</a>
-        </li>
-        <li>
-          <a href="./about">About </a>
-        </li>
+        <li><a href="./showreel">Showreel</a></li>
+        <li><a href="./index">Work</a></li>
+        <li><a href="./commercial">Commercial</a></li>
+        <li><a href="./about">About</a></li>
       </ul>
     </nav>
-    <div class="container">
-      <main class="mobile-reel">
-      
-        <video width="100%" height="auto" controls>
-          <source src="https://storage.googleapis.com/pablo-orta_website/PABLO_ORTA_REEL_2024.mp4" type="video/mp4">
-          <source src="https://storage.googleapis.com/pablo-orta_website/PABLO_ORTA_REEL_2024.webm" type="video/webm"> Your browser does not support the video tag.
-        </video>
-          <span class="showreel-title">
-          <h1>Showreel</h1>
-        </span>
-        <div class="container">
-          <div class="column left">
-          </div>
-          <div class="column right">
-          </div>
-        </div>
-      </main>
-    </div>
-    <footer class="footer">&copy; 2025 Pablo Orta </footer>
-      <script>
-    const currentPath = window.location.pathname;
-    const links = document.querySelectorAll('nav a');
-    links.forEach(link => {
-      if (link.href.includes(currentPath)) {
-        link.classList.add('current');
-      }
+  </header>
+
+  <div class="showreel-wrap">
+    <p class="project-eyebrow">2024</p>
+    <h1 class="project-title">Showreel</h1>
+
+    <video class="project-video" controls>
+      <source src="https://storage.googleapis.com/pablo-orta_website/PABLO_ORTA_REEL_2024.mp4" type="video/mp4">
+      <source src="https://storage.googleapis.com/pablo-orta_website/PABLO_ORTA_REEL_2024.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <footer>&copy; 2025 Pablo Orta</footer>
+
+  <script>
+    const page = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+    document.querySelectorAll('nav a').forEach(a => {
+      const href = a.getAttribute('href').replace('./', '').replace('.html', '');
+      if (href === page) a.classList.add('current');
     });
   </script>
-  </body>
 
+</body>
 </html>
