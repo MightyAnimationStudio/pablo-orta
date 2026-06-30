@@ -246,8 +246,8 @@ nav a.current {
 .laurels {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 24px;
+  gap: 10px;
+  margin: 0 0 28px;
 }
 
 .laurel {
@@ -255,15 +255,16 @@ nav a.current {
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 5px 13px;
-  border: 1px solid var(--border);
-  color: var(--muted);
+  padding: 6px 13px 6px 11px;
+  border: 1px solid rgba(74, 111, 165, 0.28);
+  border-left: 3px solid var(--accent);
+  color: var(--accent);
   display: inline-block;
 }
 
 .laurel.is-award {
-  border-color: rgba(196, 30, 58, 0.3);
-  border-left: 3px solid var(--accent);
+  border-color: rgba(74, 111, 165, 0.28);
+  border-left-color: var(--accent);
   color: var(--accent);
 }
 
@@ -360,7 +361,7 @@ nav a.current {
 
 /* When a hero precedes the page-wrap, tighten top spacing */
 .project-hero + .page-wrap {
-  padding-top: 0;
+  padding-top: 24px;
 }
 
 .project-eyebrow {
