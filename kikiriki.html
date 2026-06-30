@@ -122,3 +122,23 @@
 
     </div>
   </div>
+
+  <!-- NEXT PROJECT -->
+  <a href="./viking-tales" class="next-project">
+    <div class="next-bg"><img src="./images/viking-tales.jpg" alt="Viking Tales"></div>
+    <div class="next-info">
+      <span class="next-label">Next Project</span>
+      <span class="next-title">Viking Tales <span class="next-arrow">&rarr;</span></span>
+    </div>
+  </a>
+
+  <script>
+    const page = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+    document.querySelectorAll('nav a').forEach(a => {
+      const href = a.getAttribute('href').replace('./', '').replace('.html', '');
+      if (href === page) a.classList.add('current');
+    });
+  </script>
+
+</body>
+</html>

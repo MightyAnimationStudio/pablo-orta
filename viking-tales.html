@@ -123,4 +123,22 @@
     </div>
   </div>
 
-  
+  <!-- NEXT PROJECT -->
+  <a href="./not-it" class="next-project">
+    <div class="next-bg"><img src="./images/not-it.jpg" alt="Not It"></div>
+    <div class="next-info">
+      <span class="next-label">Next Project</span>
+      <span class="next-title">Not It <span class="next-arrow">&rarr;</span></span>
+    </div>
+  </a>
+
+  <script>
+    const page = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+    document.querySelectorAll('nav a').forEach(a => {
+      const href = a.getAttribute('href').replace('./', '').replace('.html', '');
+      if (href === page) a.classList.add('current');
+    });
+  </script>
+
+</body>
+</html>

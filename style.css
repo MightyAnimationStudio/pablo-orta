@@ -306,6 +306,7 @@ nav a.current {
   line-height: 1.1;
   color: #fff;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 16px;
 }
@@ -800,22 +801,35 @@ footer {
 
 .hub-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  flex: 1;
-  min-height: calc(100vh - 65px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  flex: 0 0 auto;
+  min-height: clamp(460px, 72vh, 680px);
+  overflow: hidden;
+  background: var(--bg);
 }
 
-/* Each panel is a full-height clickable link */
+.hub-grid + footer {
+  margin-top: 0;
+}
+
+/* Each panel is a clipped clickable link */
 .hub-panel {
   position: relative;
   overflow: hidden;
   text-decoration: none;
   display: flex;
   align-items: flex-end;
-  border-right: 1px solid rgba(0,0,0,0.15);
+  isolation: isolate;
+  clip-path: polygon(26px 0, 100% 0, calc(100% - 26px) 100%, 0 100%);
 }
 
-.hub-panel:last-child { border-right: none; }
+.hub-panel:first-child {
+  clip-path: polygon(0 0, 100% 0, calc(100% - 26px) 100%, 0 100%);
+}
+
+.hub-panel:last-child {
+  clip-path: polygon(26px 0, 100% 0, 100% 100%, 0 100%);
+}
 
 /* Background layer */
 .hub-panel-bg {
@@ -862,13 +876,13 @@ footer {
   font-weight: 400;
   color: #fff;
   line-height: 1;
-  letter-spacing: -0.5px;
+  letter-spacing: 0;
   display: block;
-  transition: letter-spacing 0.4s ease;
+  transition: transform 0.4s ease;
 }
 
 .hub-panel:hover .hub-panel-title {
-  letter-spacing: 0.5px;
+  transform: translateX(3px);
 }
 
 .hub-panel-cta {
@@ -916,12 +930,14 @@ footer {
   .hub-grid {
     grid-template-columns: 1fr;
     min-height: auto;
+    overflow: visible;
   }
 
   .hub-panel {
-    min-height: 38vh;
+    min-height: 34vh;
     border-right: none;
     border-bottom: 1px solid rgba(0,0,0,0.15);
+    clip-path: none;
   }
 
   .hub-panel:last-child { border-bottom: none; }
@@ -931,6 +947,28 @@ footer {
   .hub-panel-cta {
     opacity: 1;
     transform: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .hub-panel {
+    clip-path: polygon(18px 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
+  }
+
+  .hub-panel:first-child {
+    clip-path: polygon(0 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
+  }
+
+  .hub-panel:last-child {
+    clip-path: polygon(18px 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .hub-panel-content {
+    padding: 30px 24px 34px;
+  }
+
+  .hub-panel-title {
+    font-size: 38px;
   }
 }
 
