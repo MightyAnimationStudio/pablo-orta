@@ -181,7 +181,7 @@ nav a.current {
 
 .project-hero {
   width: 100%;
-  height: clamp(260px, 36vh, 400px);
+  height: clamp(150px, 20vh, 220px);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -211,7 +211,7 @@ nav a.current {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 0 64px 34px;
+  padding: 0 64px 24px;
   background: transparent;
 }
 
@@ -234,8 +234,8 @@ nav a.current {
 }
 
 @media (max-width: 768px) {
-  .project-hero { height: clamp(220px, 32vh, 320px); }
-  .hero-overlay { padding: 0 24px 28px; }
+  .project-hero { height: clamp(140px, 22vh, 200px); }
+  .hero-overlay { padding: 0 24px 22px; }
   .hero-title { font-size: 44px; }
 }
 
@@ -469,22 +469,35 @@ nav a.current {
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
-  padding: 64px 48px 80px;
+  padding: 36px 48px 80px;
 }
 
 .about-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
   gap: 56px;
-  align-items: end;
-  margin-bottom: 48px;
+  align-items: start;
+  margin-bottom: 36px;
 }
 
+.about-bio {
+  max-width: 760px;
+  margin-top: 18px;
+}
+
+.about-bio p {
+  font-size: 17px;
+  line-height: 1.78;
+  margin-bottom: 18px;
+  color: var(--text);
+}
+
+.about-bio p:last-child { margin-bottom: 0; }
 .about-stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
-  margin-top: 40px;
+  margin-top: 24px;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -546,14 +559,6 @@ nav a.current {
   right: 20px;
   bottom: 18px;
   color: rgba(255,255,255,0.72);
-}
-
-.about-wrap > p {
-  max-width: 760px;
-  font-size: 17px;
-  line-height: 1.82;
-  margin-bottom: 22px;
-  color: var(--text);
 }
 
 .about-wrap p em { font-style: italic; }
@@ -625,7 +630,7 @@ nav a.current {
 @media (max-width: 900px) {
   .about-hero {
     grid-template-columns: 1fr;
-    gap: 34px;
+    gap: 24px;
   }
 .about-visual {
     aspect-ratio: 16 / 10;
@@ -1383,7 +1388,7 @@ footer {
   }
 
   .about-wrap {
-    padding: 40px 24px 60px;
+    padding: 30px 24px 60px;
   }
 .about-stats {
     grid-template-columns: 1fr;
