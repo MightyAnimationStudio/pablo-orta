@@ -176,25 +176,28 @@ nav a.current {
 }
 
 /* ================================================
-   PROJECT HERO — full-bleed image + title overlay
+   PROJECT HERO - image band + title
    ================================================ */
 
 .project-hero {
   width: 100%;
-  height: 62vh;
-  min-height: 380px;
-  max-height: 580px;
+  background: none !important;
+  position: relative;
+  display: block;
+}
+
+.project-hero-image {
+  width: 100%;
+  height: clamp(240px, 38vh, 420px);
   background-size: cover;
   background-position: center;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
 }
 
 .hero-overlay {
   width: 100%;
-  padding: 56px 64px;
-  background: linear-gradient(to top, rgba(8,6,4,0.95) 0%, rgba(8,6,4,0.55) 45%, rgba(0,0,0,0.1) 100%);
+  padding: 28px 64px 34px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
 }
 
 .hero-eyebrow {
@@ -202,23 +205,23 @@ nav a.current {
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.55);
+  color: var(--accent);
   margin-bottom: 12px;
 }
 
 .hero-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 76px;
+  font-size: 64px;
   font-weight: 500;
   line-height: 1;
-  letter-spacing: -1px;
-  color: #fff;
+  letter-spacing: 0;
+  color: var(--text);
 }
 
 @media (max-width: 768px) {
-  .project-hero { height: 50vh; min-height: 280px; }
-  .hero-overlay { padding: 36px 24px; }
-  .hero-title   { font-size: 48px; }
+  .project-hero-image { height: clamp(190px, 32vh, 300px); }
+  .hero-overlay { padding: 24px 24px 28px; }
+  .hero-title { font-size: 44px; }
 }
 
 /* ================================================
@@ -462,16 +465,6 @@ nav a.current {
   margin-bottom: 48px;
 }
 
-.about-headline {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 64px;
-  font-weight: 400;
-  line-height: 0.98;
-  letter-spacing: 0;
-  color: var(--text);
-  max-width: 720px;
-}
-
 .about-stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -550,8 +543,6 @@ nav a.current {
 
 .about-wrap p em { font-style: italic; }
 
-.clients-section,
-.featured-awards-section,
 .awards-section {
   margin-top: 56px;
   padding-top: 40px;
@@ -566,65 +557,6 @@ nav a.current {
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 24px;
-}
-
-.client-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px 28px;
-  padding: 18px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.client-strip span {
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 1.7px;
-  text-transform: uppercase;
-  color: var(--text);
-}
-
-.featured-awards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.featured-award {
-  min-height: 154px;
-  padding: 22px 24px 24px 0;
-  border-right: 1px solid var(--border);
-}
-
-.featured-award + .featured-award {
-  padding-left: 24px;
-}
-
-.featured-award:last-child {
-  border-right: none;
-  padding-right: 0;
-}
-
-.featured-award span {
-  display: block;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 18px;
-}
-
-.featured-award strong {
-  display: block;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 1.05;
-  color: var(--text);
-  margin-bottom: 14px;
 }
 
 .award-row {
@@ -680,30 +612,8 @@ nav a.current {
     grid-template-columns: 1fr;
     gap: 34px;
   }
-
-  .about-headline {
-    font-size: 52px;
-  }
-
-  .about-visual {
+.about-visual {
     aspect-ratio: 16 / 10;
-  }
-
-  .featured-awards {
-    grid-template-columns: 1fr;
-  }
-
-  .featured-award,
-  .featured-award + .featured-award,
-  .featured-award:last-child {
-    min-height: auto;
-    padding: 22px 0;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .featured-award:last-child {
-    border-bottom: none;
   }
 }
 
@@ -1460,12 +1370,7 @@ footer {
   .about-wrap {
     padding: 40px 24px 60px;
   }
-
-  .about-headline {
-    font-size: 42px;
-  }
-
-  .about-stats {
+.about-stats {
     grid-template-columns: 1fr;
   }
 
@@ -1480,12 +1385,7 @@ footer {
   .about-stat:last-child {
     border-bottom: none;
   }
-
-  .client-strip {
-    gap: 14px 20px;
-  }
-
-  .showreel-wrap {
+.showreel-wrap {
     padding: 36px 24px 60px;
   }
 
