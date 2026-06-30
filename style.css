@@ -927,7 +927,7 @@ footer {
 
 /* Each panel is a clipped clickable link */
 .hub-panel {
-  --hub-line-offset: 26px;
+  --hub-cut: 26px;
   position: relative;
   overflow: hidden;
   text-decoration: none;
@@ -938,7 +938,7 @@ footer {
 }
 
 .hub-panel:first-child {
-  --hub-line-offset: 0;
+  --hub-cut: 26px;
   clip-path: polygon(0 0, 100% 0, calc(100% - 26px) 100%, 0 100%);
 }
 
@@ -1034,20 +1034,25 @@ footer {
   filter: brightness(0.50) saturate(1.05);
 }
 
-/* Thin accent line that grows from bottom on hover */
+/* Diagonal accent that follows the clipped panel edge */
 .hub-panel::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: var(--hub-line-offset);
-  width: 3px;
-  height: 0;
+  inset: 0;
   background: var(--accent);
-  transition: height 0.4s ease;
+  clip-path: polygon(var(--hub-cut) 0, calc(var(--hub-cut) + 3px) 0, 3px 100%, 0 100%);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.4s ease;
   z-index: 2;
+  pointer-events: none;
 }
 
-.hub-panel:hover::after { height: 100%; }
+.hub-panel:first-child::after {
+  clip-path: polygon(calc(100% - 3px) 0, 100% 0, calc(100% - var(--hub-cut)) 100%, calc(100% - var(--hub-cut) - 3px) 100%);
+}
+
+.hub-panel:hover::after { transform: scaleY(1); }
 
 @media (max-width: 768px) {
   .hub-grid {
@@ -1057,7 +1062,7 @@ footer {
   }
 
   .hub-panel {
-    --hub-line-offset: 0;
+    --hub-cut: 0;
     min-height: clamp(220px, 34vh, 320px);
     border-right: none;
     border-bottom: 1px solid rgba(0,0,0,0.15);
@@ -1083,12 +1088,12 @@ footer {
 
 @media (min-width: 769px) and (max-width: 900px) {
   .hub-panel {
-    --hub-line-offset: 18px;
+    --hub-cut: 18px;
     clip-path: polygon(18px 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
   }
 
   .hub-panel:first-child {
-    --hub-line-offset: 0;
+    --hub-cut: 18px;
     clip-path: polygon(0 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
   }
 
