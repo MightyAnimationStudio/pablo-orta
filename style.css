@@ -176,28 +176,43 @@ nav a.current {
 }
 
 /* ================================================
-   PROJECT HERO - image band + title
+   PROJECT HERO - faded image-backed title banner
    ================================================ */
 
 .project-hero {
   width: 100%;
-  background: none !important;
-  position: relative;
-  display: block;
-}
-
-.project-hero-image {
-  width: 100%;
-  height: clamp(240px, 38vh, 420px);
+  height: clamp(260px, 36vh, 400px);
   background-size: cover;
   background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  isolation: isolate;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(247, 244, 239, 0.74);
+  z-index: 0;
+}
+
+.project-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(247,244,239,0.94) 0%, rgba(247,244,239,0.62) 56%, rgba(247,244,239,0.45) 100%);
+  z-index: 0;
 }
 
 .hero-overlay {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  padding: 28px 64px 34px;
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
+  padding: 0 64px 34px;
+  background: transparent;
 }
 
 .hero-eyebrow {
@@ -219,8 +234,8 @@ nav a.current {
 }
 
 @media (max-width: 768px) {
-  .project-hero-image { height: clamp(190px, 32vh, 300px); }
-  .hero-overlay { padding: 24px 24px 28px; }
+  .project-hero { height: clamp(220px, 32vh, 320px); }
+  .hero-overlay { padding: 0 24px 28px; }
   .hero-title { font-size: 44px; }
 }
 
@@ -232,7 +247,7 @@ nav a.current {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .laurel {
@@ -345,7 +360,7 @@ nav a.current {
 
 /* When a hero precedes the page-wrap, tighten top spacing */
 .project-hero + .page-wrap {
-  padding-top: 40px;
+  padding-top: 0;
 }
 
 .project-eyebrow {
@@ -1356,7 +1371,7 @@ footer {
   }
 
   .page-wrap {
-    padding: 36px 24px 60px;
+    padding: 24px 24px 60px;
   }
 
   .project-title {
