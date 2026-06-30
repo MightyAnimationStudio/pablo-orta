@@ -927,6 +927,7 @@ footer {
 
 /* Each panel is a clipped clickable link */
 .hub-panel {
+  --hub-line-offset: 26px;
   position: relative;
   overflow: hidden;
   text-decoration: none;
@@ -937,6 +938,7 @@ footer {
 }
 
 .hub-panel:first-child {
+  --hub-line-offset: 0;
   clip-path: polygon(0 0, 100% 0, calc(100% - 26px) 100%, 0 100%);
 }
 
@@ -1037,7 +1039,7 @@ footer {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: var(--hub-line-offset);
   width: 3px;
   height: 0;
   background: var(--accent);
@@ -1055,11 +1057,19 @@ footer {
   }
 
   .hub-panel {
-    min-height: 34vh;
+    --hub-line-offset: 0;
+    min-height: clamp(220px, 34vh, 320px);
     border-right: none;
     border-bottom: 1px solid rgba(0,0,0,0.15);
     clip-path: none;
   }
+
+  .hub-panel:first-child,
+  .hub-panel:last-child {
+    clip-path: none;
+  }
+
+  .hub-panel::after { display: none; }
 
   .hub-panel:last-child { border-bottom: none; }
 
@@ -1073,10 +1083,12 @@ footer {
 
 @media (min-width: 769px) and (max-width: 900px) {
   .hub-panel {
+    --hub-line-offset: 18px;
     clip-path: polygon(18px 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
   }
 
   .hub-panel:first-child {
+    --hub-line-offset: 0;
     clip-path: polygon(0 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
   }
 
