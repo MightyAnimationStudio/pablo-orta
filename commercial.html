@@ -87,6 +87,8 @@
     </nav>
   </header>
 
+  <h1 class="sr-only">Commercial Work</h1>
+
   <div class="project-list">
 
     <div class="project-strip is-clickable" data-video="https://storage.googleapis.com/pablo-orta_website/Trolli.mp4">
@@ -202,7 +204,7 @@
   <!-- Video Modal -->
   <div id="video-modal" class="modal" role="dialog" aria-modal="true">
     <div class="modal-inner">
-      <button class="modal-close" id="modal-close-btn">Close ✕</button>
+      <button type="button" class="modal-close" id="modal-close-btn">Close ✕</button>
       <video id="modal-video" class="modal-video" controls></video>
     </div>
   </div>
@@ -221,19 +223,36 @@
     const modal    = document.getElementById('video-modal');
     const modalVid = document.getElementById('modal-video');
     const closeBtn = document.getElementById('modal-close-btn');
+    let lastTrigger = null;
+
+    function openModal(card) {
+      lastTrigger = card;
+      modalVid.src = card.dataset.video;
+      modal.classList.add('is-open');
+      modalVid.play().catch(() => {});
+    }
 
     document.querySelectorAll('.is-clickable').forEach(card => {
-      card.addEventListener('click', () => {
-        modalVid.src = card.dataset.video;
-        modal.classList.add('is-open');
-        modalVid.play();
+      const title = card.querySelector('.strip-title')?.textContent?.trim();
+      card.setAttribute('role', 'button');
+      card.setAttribute('tabindex', '0');
+      if (title) card.setAttribute('aria-label', `Play ${title}`);
+
+      card.addEventListener('click', () => openModal(card));
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openModal(card);
+        }
       });
     });
 
     function closeModal() {
+      if (!modal.classList.contains('is-open')) return;
       modal.classList.remove('is-open');
       modalVid.pause();
       modalVid.src = '';
+      lastTrigger?.focus();
     }
 
     closeBtn.addEventListener('click', closeModal);

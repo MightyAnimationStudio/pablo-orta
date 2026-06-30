@@ -34,6 +34,18 @@ body {
 
 a { color: inherit; text-decoration: none; }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ================================================
    HEADER + NAV
    ================================================ */
@@ -233,10 +245,16 @@ nav a.current {
   color: var(--text);
 }
 
+.hero-title--long {
+  font-size: clamp(44px, 4.8vw, 56px);
+  line-height: 0.95;
+}
+
 @media (max-width: 768px) {
   .project-hero { height: clamp(140px, 22vh, 200px); }
   .hero-overlay { padding: 0 24px 22px; }
   .hero-title { font-size: 44px; }
+  .hero-title--long { font-size: 38px; }
 }
 
 /* ================================================
@@ -1127,7 +1145,8 @@ footer {
 /* Each strip is a storyboard panel */
 .project-strip {
   display: flex;
-  min-height: 210px;
+  height: clamp(300px, 30vw, 390px);
+  min-height: 0;
   text-decoration: none;
   color: inherit;
   border-bottom: 1px solid var(--border);
@@ -1308,6 +1327,11 @@ footer {
   cursor: pointer;
 }
 
+.project-strip.is-clickable:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
 /* ================================================
    RESPONSIVE
    ================================================ */
@@ -1335,6 +1359,7 @@ footer {
   /* Strips go vertical on mobile */
   .project-strip {
     flex-direction: column;
+    height: auto;
     min-height: auto;
     opacity: 1 !important;          /* skip scroll anim on mobile */
     transform: none !important;
