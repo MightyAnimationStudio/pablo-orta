@@ -194,7 +194,7 @@ nav a.current {
 .hero-overlay {
   width: 100%;
   padding: 56px 64px;
-  background: linear-gradient(to top, rgba(8,6,4,0.80) 0%, rgba(0,0,0,0) 65%);
+  background: linear-gradient(to top, rgba(8,6,4,0.95) 0%, rgba(8,6,4,0.55) 45%, rgba(0,0,0,0.1) 100%);
 }
 
 .hero-eyebrow {
@@ -528,20 +528,131 @@ nav a.current {
    SHOWREEL PAGE
    ================================================ */
 
-.showreel-wrap {
+/* Dark cinematic stage */
+.showreel-stage {
+  background: #0c0b09;
+  padding: 56px 0 0;
   flex: 1;
-  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.showreel-title-block {
+  text-align: center;
+  padding: 0 48px 40px;
+}
+
+.showreel-year {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 10px;
+}
+
+.showreel-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 80px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.showreel-video {
+  width: 100%;
+  display: block;
+  background: #000;
+  /* no max-width — fills the dark stage edge to edge */
+}
+
+/* Scrolling credentials marquee */
+.marquee-wrap {
+  overflow: hidden;
+  background: var(--accent);
+  padding: 10px 0;
+  user-select: none;
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marqueeScroll 35s linear infinite;
+}
+
+.marquee-track:hover { animation-play-state: paused; }
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-item {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  padding: 0 28px;
+  flex-shrink: 0;
+}
+
+.marquee-dot {
+  color: rgba(255,255,255,0.4);
+}
+
+/* Featured works list below the reel */
+.reel-works-wrap {
+  max-width: 860px;
   margin: 0 auto;
-  padding: 52px 48px 80px;
+  padding: 52px 48px 72px;
   width: 100%;
 }
 
-.showreel-wrap .project-eyebrow {
-  margin-bottom: 14px;
+.reel-works-title {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
 }
 
-.showreel-wrap .project-title {
-  margin-bottom: 28px;
+.reel-work-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+.reel-work-row:hover { color: var(--accent); }
+
+.reel-work-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.reel-work-role {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .showreel-heading { font-size: 52px; }
+  .showreel-title-block { padding: 0 24px 32px; }
+  .reel-works-wrap { padding: 36px 24px 56px; }
+  .reel-work-row { flex-direction: column; gap: 4px; }
 }
 
 /* ================================================
@@ -681,6 +792,230 @@ footer {
   border-top: 1px solid var(--border);
   text-align: right;
   margin-top: auto;
+}
+
+/* ================================================
+   HOMEPAGE HUB
+   ================================================ */
+
+/* Hero intro */
+.home-hero {
+  padding: 80px 64px 72px;
+  border-bottom: 1px solid var(--border);
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.home-hero-eyebrow {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.home-hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+
+.home-hero-role {
+  font-size: 11px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.home-hero-award {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid rgba(74, 111, 165, 0.35);
+  border-left: 3px solid var(--accent);
+  padding: 5px 14px 5px 10px;
+  margin-bottom: 44px;
+}
+
+.home-hero-ctas {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.cta-primary {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  background: var(--text);
+  color: var(--bg);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.cta-primary:hover { background: var(--accent); }
+
+.cta-secondary {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.cta-secondary:hover { color: var(--text); }
+
+/* Section headers between blocks */
+.home-section-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 20px 48px;
+  border-bottom: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.home-section-bar + .project-list {
+  border-top: none; /* avoid double border */
+}
+
+.home-section-name {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.home-section-link {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-section-link:hover { color: var(--text); }
+
+/* Showreel teaser strip */
+.showreel-teaser {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 52px 64px;
+  background: #0c0b09;
+  text-decoration: none;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  transition: background 0.35s ease;
+}
+
+.showreel-teaser:hover { background: #181510; }
+
+.teaser-year {
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 10px;
+}
+
+.teaser-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 58px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.teaser-cta {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: gap 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.showreel-teaser:hover .teaser-cta {
+  gap: 20px;
+  color: #fff;
+}
+
+/* Commercial preview mini-grid */
+.commercial-preview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding: 4px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.commercial-preview-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: var(--card-dim);
+  display: block;
+  text-decoration: none;
+}
+
+.commercial-preview-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.55s ease;
+  filter: grayscale(30%);
+}
+
+.commercial-preview-card:hover img {
+  transform: scale(1.04);
+  filter: grayscale(0%);
+}
+
+@media (max-width: 900px) {
+  .home-hero-name { font-size: 68px; }
+  .teaser-title   { font-size: 42px; }
+  .commercial-preview { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .home-hero { padding: 48px 24px 52px; }
+  .home-hero-name { font-size: 52px; letter-spacing: -1px; }
+  .home-section-bar { padding: 16px 24px; }
+  .showreel-teaser { padding: 40px 24px; flex-direction: column; align-items: flex-start; gap: 24px; }
+  .teaser-title { font-size: 36px; }
+  .commercial-preview { grid-template-columns: 1fr; }
+  .home-hero-ctas { flex-direction: column; align-items: flex-start; }
 }
 
 /* ================================================
