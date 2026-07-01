@@ -73,7 +73,7 @@
 <body>
 
   <header>
-    <a href="./index" class="brand">
+    <a href="/" class="brand">
       <span class="brand-name">Pablo Orta</span>
       <span class="brand-sub">Director &amp; Editor</span>
     </a>
@@ -204,61 +204,4 @@
   <!-- Video Modal -->
   <div id="video-modal" class="modal" role="dialog" aria-modal="true">
     <div class="modal-inner">
-      <button type="button" class="modal-close" id="modal-close-btn">Close ✕</button>
-      <video id="modal-video" class="modal-video" controls></video>
-    </div>
-  </div>
-
-  <footer>&copy; 2026 Pablo Orta</footer>
-
-  <script>
-    // Nav active state
-    const page = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
-    document.querySelectorAll('nav a').forEach(a => {
-      const href = a.getAttribute('href').replace('./', '').replace('.html', '');
-      if (href === page) a.classList.add('current');
-    });
-
-    // Video modal
-    const modal    = document.getElementById('video-modal');
-    const modalVid = document.getElementById('modal-video');
-    const closeBtn = document.getElementById('modal-close-btn');
-    let lastTrigger = null;
-
-    function openModal(card) {
-      lastTrigger = card;
-      modalVid.src = card.dataset.video;
-      modal.classList.add('is-open');
-      modalVid.play().catch(() => {});
-    }
-
-    document.querySelectorAll('.is-clickable').forEach(card => {
-      const title = card.querySelector('.strip-title')?.textContent?.trim();
-      card.setAttribute('role', 'button');
-      card.setAttribute('tabindex', '0');
-      if (title) card.setAttribute('aria-label', `Play ${title}`);
-
-      card.addEventListener('click', () => openModal(card));
-      card.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          openModal(card);
-        }
-      });
-    });
-
-    function closeModal() {
-      if (!modal.classList.contains('is-open')) return;
-      modal.classList.remove('is-open');
-      modalVid.pause();
-      modalVid.src = '';
-      lastTrigger?.focus();
-    }
-
-    closeBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-  </script>
-
-</body>
-</html>
+      <button type="button" class="modal-close" id="modal-close

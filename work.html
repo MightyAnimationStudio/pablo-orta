@@ -44,7 +44,7 @@
 <body>
 
   <header>
-    <a href="./index" class="brand">
+    <a href="/" class="brand">
       <span class="brand-name">Pablo Orta</span>
       <span class="brand-sub">Director &amp; Editor</span>
     </a>
@@ -148,9 +148,4 @@
     const page = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
     document.querySelectorAll('nav a').forEach(a => {
       const href = a.getAttribute('href').replace('./', '').replace('.html', '');
-      if (href === page) a.classList.add('current');
-    });
-  </script>
-
-</body>
-</html>
+      if (href === page) a.classList.add('curr
