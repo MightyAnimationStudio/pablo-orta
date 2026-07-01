@@ -626,6 +626,26 @@ nav a.current {
   flex-shrink: 0;
 }
 
+/* Clients grid */
+.clients-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 0;
+  padding-top: 4px;
+}
+
+.client-name {
+  font-size: 14px;
+  color: var(--text);
+  padding: 8px 0;
+  width: 50%;
+  border-bottom: 1px solid var(--border);
+}
+
+.client-name:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
 .contact-section {
   margin-top: 48px;
 }

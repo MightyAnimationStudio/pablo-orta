@@ -139,4 +139,55 @@
       </div>
       <div class="award-row">
         <span class="award-name">Audience Prize — FICG 37</span>
-        <span class="award-p
+        <span class="award-project">Goya</span>
+      </div>
+      <div class="award-row">
+        <span class="award-name">Audience Prize — FICG 29</span>
+        <span class="award-project">Not It</span>
+      </div>
+      <div class="award-row">
+        <span class="award-name">YouTube Audience Award — The Wrap Shortlist</span>
+        <span class="award-project">Not It</span>
+      </div>
+    </div>
+
+    <!-- CLIENTS -->
+    <div class="awards-section">
+      <p class="section-label">Selected Clients</p>
+      <div class="clients-grid">
+        <span class="client-name">HBO Max</span>
+        <span class="client-name">Cartoon Network</span>
+        <span class="client-name">Disney</span>
+        <span class="client-name">Lucasfilm</span>
+        <span class="client-name">Netflix</span>
+        <span class="client-name">Nickelodeon</span>
+        <span class="client-name">Riot Games</span>
+        <span class="client-name">Red Bull</span>
+        <span class="client-name">Mattel</span>
+        <span class="client-name">Trolli</span>
+        <span class="client-name">Black Forest</span>
+        <span class="client-name">Vidanta</span>
+        <span class="client-name">IMCINE</span>
+        <span class="client-name">Mighty Animation</span>
+      </div>
+    </div>
+
+    <div class="contact-section">
+      <p class="section-label" style="margin-bottom:12px;">Contact</p>
+      <p>Email &middot; <a href="mailto:pabloaortaz@gmail.com">pabloaortaz@gmail.com</a></p>
+    </div>
+
+  </div>
+
+  <footer>&copy; 2026 Pablo Orta</footer>
+
+  <script>
+    const page = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+    document.querySelectorAll('nav a').forEach(a => {
+      const href = a.getAttribute('href').replace('./', '').replace('.html', '');
+      if (href === page) a.classList.add('current');
+    });
+  </script>
+
+</body>
+</html>
