@@ -141,14 +141,13 @@
     </a>
 
   </div>
-
-  <footer>&copy; 2026 Pablo Orta</footer>
+  <footer>&copy; 2026 Pablo Orta <a href="./contact">Contact</a></footer>
 
   <script>
-    const page = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
-    document.querySelectorAll('nav a').forEach(a => {
-      const href = a.getAttribute('href').replace('./', '').replace('.html', '');
-      if (href === page) a.classList.add('current');
+    const page = window.location.pathname.split("/").pop().replace(".html", "") || "index";
+    document.querySelectorAll("nav a").forEach(a => {
+      const href = a.getAttribute("href").replace("./", "").replace(".html", "");
+      if (href === page) a.classList.add("current");
     });
   </script>
 

@@ -171,46 +171,32 @@
 
   </div>
 
-  <!-- Video Modal -->
+    <!-- Video Modal -->
   <div id="video-modal" class="modal" role="dialog" aria-modal="true">
     <div class="modal-inner">
-      <button class="modal-close" id="modal-close-btn">Close ✕</button>
+      <button class="modal-close" id="modal-close-btn">Close &#10005;</button>
       <video id="modal-video" class="modal-video" controls></video>
     </div>
   </div>
 
-  <footer>&copy; 2026 Pablo Orta</footer>
+  <footer>&copy; 2026 Pablo Orta <a href="./contact">Contact</a></footer>
 
   <script>
-    // Nav active state
-    const page = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
-    document.querySelectorAll('nav a').forEach(a => {
-      const href = a.getAttribute('href').replace('./', '').replace('.html', '');
-      if (href === page) a.classList.add('current');
+    const page = window.location.pathname.split("/").pop().replace(".html", "") || "index";
+    document.querySelectorAll("nav a").forEach(a => {
+      const href = a.getAttribute("href").replace("./", "").replace(".html", "");
+      if (href === page) a.classList.add("current");
     });
-
-    // Video modal
-    const modal    = document.getElementById('video-modal');
-    const modalVid = document.getElementById('modal-video');
-    const closeBtn = document.getElementById('modal-close-btn');
-
-    document.querySelectorAll('.is-clickable').forEach(card => {
-      card.addEventListener('click', () => {
-        modalVid.src = card.dataset.video;
-        modal.classList.add('is-open');
-        modalVid.play();
-      });
+    const modal = document.getElementById("video-modal");
+    const modalVid = document.getElementById("modal-video");
+    const closeBtn = document.getElementById("modal-close-btn");
+    document.querySelectorAll(".is-clickable").forEach(card => {
+      card.addEventListener("click", () => { modalVid.src = card.dataset.video; modal.classList.add("is-open"); modalVid.play(); });
     });
-
-    function closeModal() {
-      modal.classList.remove('is-open');
-      modalVid.pause();
-      modalVid.src = '';
-    }
-
-    closeBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+    function closeModal() { modal.classList.remove("is-open"); modalVid.pause(); modalVid.src = ""; }
+    closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
   </script>
 
 </body>
