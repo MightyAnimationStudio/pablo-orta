@@ -663,15 +663,56 @@ nav a.current {
 /* Dark cinematic stage */
 .showreel-stage {
   background: #0c0b09;
-  padding: 56px 0 0;
+  padding: 0;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
+/* Collage intro area — 3×2 image grid + title overlay */
+.showreel-intro {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 3×2 grid of project images fills the intro area */
+.showreel-collage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  z-index: 0;
+}
+
+.showreel-collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.42;
+  filter: grayscale(10%);
+  transition: opacity 0.4s;
+}
+
+/* Dark overlay on top of collage — keeps text readable */
+.showreel-intro::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 8, 6, 0.5);
+  z-index: 1;
+}
+
 .showreel-title-block {
+  position: relative;
+  z-index: 2;
   text-align: center;
-  padding: 0 48px 40px;
+  padding: 56px 48px 52px;
 }
 
 .showreel-year {
@@ -679,7 +720,7 @@ nav a.current {
   font-weight: 500;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.45);
   margin-bottom: 10px;
 }
 
