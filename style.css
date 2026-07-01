@@ -819,6 +819,12 @@ nav a.current {
   -webkit-appearance: none;
 }
 
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.75;
+}
+
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
