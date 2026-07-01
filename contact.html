@@ -90,6 +90,7 @@
       if (!name || !email || !message) { alert('Please fill in your name, email and message.'); return; }
       const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
       window.location.href = 'mailto:pabloaortaz@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
     });
   </script>
 
