@@ -692,11 +692,67 @@ nav a.current {
   letter-spacing: -1px;
 }
 
+.showreel-video-wrap {
+  position: relative;
+  width: 100%;
+}
+
+/* Clickable splash overlay — shown before the video plays */
+.showreel-splash {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  overflow: hidden;
+  transition: opacity 0.4s ease;
+}
+
+.showreel-splash img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.72);
+}
+
+/* Play button on top of splash */
+.showreel-splash-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.showreel-splash-play svg {
+  margin-left: 4px; /* optical centering */
+  fill: #1a1a1a;
+}
+
+.showreel-splash:hover .showreel-splash-play {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: #fff;
+}
+
+.showreel-splash.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .showreel-video {
   width: 100%;
   display: block;
   background: #000;
-  /* no max-width — fills the dark stage edge to edge */
 }
 
 /* Scrolling credentials marquee */

@@ -63,11 +63,25 @@
       <p class="showreel-year">2026</p>
       <h1 class="showreel-heading">Showreel</h1>
     </div>
-    <video class="showreel-video" controls preload="metadata">
-      <source src="https://storage.googleapis.com/pablo-orta_website/PABLO_ORTA_REEL_2024.mp4" type="video/mp4">
-      <source src="https://storage.googleapis.com/pablo-orta_website/PABLO_ORTA_REEL_2024.webm" type="video/webm">
-      Your browser does not support the video tag.
-    </video>
+    <div class="showreel-video-wrap">
+      <!-- Splash: 6-image grid + play button, hides when video starts -->
+      <div class="showreel-splash" id="showreel-splash" aria-label="Play showreel">
+        <img src="./images/goya.jpg" alt="">
+        <img src="./images/secret-life-mind.jpg" alt="">
+        <img src="./images/kikiriki.jpg" alt="">
+        <img src="./images/viking-tales.jpg" alt="">
+        <img src="./images/not-it.jpg" alt="">
+        <img src="./images/pixelatl.jpg" alt="">
+        <div class="showreel-splash-play">
+          <svg width="22" height="22" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+      <video class="showreel-video" id="showreel-video" controls preload="metadata">
+        <source src="https://storage.googleapis.com/pablo-orta_website/PABLO_ORTA_REEL_2024.mp4" type="video/mp4">
+        <source src="https://storage.googleapis.com/pablo-orta_website/PABLO_ORTA_REEL_2024.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </div>
 
   <!-- SCROLLING CREDENTIALS -->
@@ -155,6 +169,18 @@
       const href = a.getAttribute('href').replace('./', '').replace('.html', '');
       if (href === page) a.classList.add('current');
     });
+
+    // Splash → play
+    const splash = document.getElementById('showreel-splash');
+    const vid    = document.getElementById('showreel-video');
+    if (splash && vid) {
+      splash.addEventListener('click', () => {
+        splash.classList.add('is-hidden');
+        vid.play();
+      });
+      // If user hits native play controls, also hide splash
+      vid.addEventListener('play', () => splash.classList.add('is-hidden'));
+    }
   </script>
 
 </body>
