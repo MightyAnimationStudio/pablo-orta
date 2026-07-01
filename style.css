@@ -694,7 +694,7 @@ nav a.current {
   height: 100%;
   object-fit: cover;
   display: block;
-  opacity: 0.42;
+  opacity: 0.65;
   filter: grayscale(10%);
   transition: opacity 0.4s;
 }
@@ -704,7 +704,7 @@ nav a.current {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(10, 8, 6, 0.5);
+  background: rgba(10, 8, 6, 0.32);
   z-index: 1;
 }
 
