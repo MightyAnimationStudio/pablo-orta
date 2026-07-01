@@ -1129,6 +1129,198 @@ footer {
 }
 
 /* ================================================
+   STORYBOARD GRID  (work.html & commercial.html)
+   ================================================ */
+
+/* Page wrapper with subtle graph-paper background */
+.storyboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  padding: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  flex: 1;
+  /* Graph paper — two overlapping line sets */
+  background-image:
+    repeating-linear-gradient(rgba(0,0,0,0.034) 0 1px, transparent 1px 48px),
+    repeating-linear-gradient(90deg, rgba(0,0,0,0.034) 0 1px, transparent 1px 48px);
+}
+
+/* Each card = one storyboard panel */
+.storyboard-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  animation: stripReveal 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94) backwards;
+  cursor: pointer;
+}
+
+.storyboard-card:nth-child(1) { animation-delay:  50ms; }
+.storyboard-card:nth-child(2) { animation-delay: 130ms; }
+.storyboard-card:nth-child(3) { animation-delay: 210ms; }
+.storyboard-card:nth-child(4) { animation-delay: 290ms; }
+.storyboard-card:nth-child(5) { animation-delay: 370ms; }
+.storyboard-card:nth-child(6) { animation-delay: 450ms; }
+
+.storyboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.09);
+  border-color: var(--accent);
+}
+
+/* Corner registration marks — top-left */
+.storyboard-card::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid var(--accent);
+  border-left: 2px solid var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+
+/* Corner registration marks — bottom-right */
+.storyboard-card::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid var(--accent);
+  border-right: 2px solid var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+
+.storyboard-card:hover::before,
+.storyboard-card:hover::after { opacity: 1; }
+
+/* Image panel */
+.storyboard-image-wrap {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.storyboard-image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.storyboard-card:hover .storyboard-image-wrap img {
+  transform: scale(1.025);
+}
+
+/* Frame counter — film-strip style overlay on image */
+.storyboard-frame-tag {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-family: 'Courier New', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.95);
+  background: rgba(0,0,0,0.5);
+  padding: 3px 8px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Annotation section — warm paper below image */
+.storyboard-info {
+  padding: 14px 18px 18px;
+  border-top: 1.5px solid var(--border);
+  background: #f0ebe3;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.storyboard-roles {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+
+.storyboard-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.3px;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+.storyboard-platform {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* CTA / action line */
+.storyboard-cta {
+  margin-top: auto;
+  padding-top: 14px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s, gap 0.2s;
+}
+
+.storyboard-cta-arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.storyboard-card:hover .storyboard-cta { color: var(--accent); gap: 12px; }
+.storyboard-card:hover .storyboard-cta-arrow { transform: translateX(4px); }
+
+/* Play button (commercial variant) */
+.storyboard-play-btn {
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid var(--border);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.25s, border-color 0.25s;
+}
+
+.storyboard-play-btn svg { fill: var(--muted); transition: fill 0.25s; margin-left: 2px; }
+
+.storyboard-card:hover .storyboard-play-btn { background: var(--accent); border-color: var(--accent); }
+.storyboard-card:hover .storyboard-play-btn svg { fill: #fff; }
+
+@media (max-width: 768px) {
+  .storyboard-grid { grid-template-columns: 1fr; padding: 16px; gap: 16px; }
+  .storyboard-title { font-size: 24px; }
+}
+
+/* ================================================
    PROJECT STRIPS — ALTERNATING STORYBOARD PANELS
    index.html & commercial.html
    ================================================ */
@@ -1145,8 +1337,7 @@ footer {
 /* Each strip is a storyboard panel */
 .project-strip {
   display: flex;
-  height: clamp(300px, 30vw, 390px);
-  min-height: 0;
+  min-height: 0; /* image drives the height */
   text-decoration: none;
   color: inherit;
   border-bottom: 1px solid var(--border);
@@ -1173,16 +1364,12 @@ footer {
   flex: 0 0 40%;
   position: relative;
   overflow: hidden;
-  background: #0d0c0a; /* dark bg — letterboxing looks like a film frame */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: var(--card-dim);
 }
 
 .strip-image img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
   display: block;
   transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
