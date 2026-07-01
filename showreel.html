@@ -75,6 +75,105 @@
         <p class="showreel-year">2026</p>
         <h1 class="showreel-heading">Showreel</h1>
       </div>
+    </div><!-- /showreel-intro -->
+
+    <video class="showreel-video" controls preload="metadata">
+      <source src="https://storage.googleapis.com/pablo-orta_website/PABLO_ORTA_REEL_2024.mp4" type="video/mp4">
+      <source src="https://storage.googleapis.com/pablo-orta_website/PABLO_ORTA_REEL_2024.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+
+  </div><!-- /showreel-stage -->
+
+  <!-- SCROLLING CREDENTIALS -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">International Emmy® Award</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">HBO Max</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">Cartoon Network</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">Annecy Film Festival</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">FICG</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">50+ Film Festivals</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">Mighty Animation</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">Riot Games</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">Red Bull</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">Mattel</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <!-- duplicate set for seamless loop -->
+      <span class="marquee-item">International Emmy® Award</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">HBO Max</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">Cartoon Network</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">Annecy Film Festival</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">FICG</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">50+ Film Festivals</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">Mighty Animation</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">Riot Games</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">Red Bull</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+      <span class="marquee-item">Mattel</span>
+      <span class="marquee-item marquee-dot">&middot;</span>
+    </div>
+  </div>
+
+  <!-- FEATURED IN THIS REEL -->
+  <div class="reel-works-wrap">
+    <p class="reel-works-title">Featured in this reel</p>
+
+    <a href="./goya" class="reel-work-row">
+      <span class="reel-work-title">Goya</span>
+      <span class="reel-work-role">Writer &middot; Director &middot; Editor</span>
+    </a>
+    <a href="./secret-life-mind" class="reel-work-row">
+      <span class="reel-work-title">The Secret Life of Your Mind</span>
+      <span class="reel-work-role">Writer &middot; Director &middot; Editor</span>
+    </a>
+    <a href="./kikiriki" class="reel-work-row">
+      <span class="reel-work-title">Kikiriki</span>
+      <span class="reel-work-role">Writer &middot; Editor</span>
+    </a>
+    <a href="./viking-tales" class="reel-work-row">
+      <span class="reel-work-title">Viking Tales</span>
+      <span class="reel-work-role">Writer &middot; Editor</span>
+    </a>
+    <a href="./not-it" class="reel-work-row">
+      <span class="reel-work-title">Not It</span>
+      <span class="reel-work-role">Writer &middot; Director &middot; Editor</span>
+    </a>
+    <a href="./pixelatl" class="reel-work-row">
+      <span class="reel-work-title">Pixelatl 2022</span>
+      <span class="reel-work-role">Writer &middot; Editor</span>
+    </a>
+  </div>
+
+  <footer>&copy; 2026 Pablo Orta</footer>
+
+  <script>
+    const page = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+    document.querySelectorAll('nav a').forEach(a => {
+      const href = a.getAttribute('href').replace('./', '').replace('.html', '');
+      if (href === page) a.classList.add('current');
+    });
+  </script>
+
+</body>
+</html>iv>
     </div>
 
     <video class="showreel-video" controls preload="metadata">
