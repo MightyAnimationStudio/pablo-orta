@@ -1649,3 +1649,9 @@ footer a:hover { color: var(--accent); }
   .storyboard-grid { grid-template-columns: 1fr; padding: 16px; gap: 16px; }
   .storyboard-title { font-size: 24px; }
 }
+.storyboard-card:hover .storyboard-play-btn svg { fill: #fff; }
+
+@media (max-width: 768px) {
+  .storyboard-grid { grid-template-columns: 1fr; padding: 16px; gap: 16px; }
+  .storyboard-title { font-size: 24px; }
+}

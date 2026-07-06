@@ -22,6 +22,15 @@
   <link rel="canonical" href="https://pablo-orta.com/work">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="stylesheet" href="./style.css">
+  <style>
+    .storyboard-image-wrap { aspect-ratio: 4/3; overflow: hidden; position: relative; line-height: 0; }
+    .storyboard-image-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .storyboard-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 22px; padding: 28px; max-width: 1100px; margin: 0 auto; }
+    .storyboard-card { display: flex; flex-direction: column; border: 1.5px solid #dfd9cf; background: #f7f4ef; cursor: pointer; }
+    .storyboard-info { padding: 14px 18px 18px; background: #f0ebe3; border-top: 1.5px solid #dfd9cf; flex: 1; display: flex; flex-direction: column; }
+    .storyboard-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 400; }
+    @media (max-width: 768px) { .storyboard-grid { grid-template-columns: 1fr; padding: 16px; gap: 16px; } }
+  </style>
 
   <script type="application/ld+json">
   {
@@ -130,6 +139,30 @@
     <a href="./pixelatl" class="storyboard-card">
       <div class="storyboard-image-wrap">
         <img src="./images/pixelatl.jpg" alt="Pixelatl 2022">
+        <span class="storyboard-frame-tag">[ 006 ]</span>
+      </div>
+      <div class="storyboard-info">
+        <p class="storyboard-roles">Writer &middot; Editor</p>
+        <h2 class="storyboard-title">Pixelatl 2022</h2>
+        <p class="storyboard-platform">Pixelatl Festival &nbsp;&middot;&nbsp; Identity Film</p>
+        <span class="storyboard-cta">View project <span class="storyboard-cta-arrow">&rarr;</span></span>
+      </div>
+    </a>
+
+  </div>
+  <footer>&copy; 2026 Pablo Orta <a href="./contact">Contact</a></footer>
+
+  <script>
+    const page = window.location.pathname.split("/").pop().replace(".html", "") || "index";
+    document.querySelectorAll("nav a").forEach(a => {
+      const href = a.getAttribute("href").replace("./", "").replace(".html", "");
+      if (href === page) a.classList.add("current");
+    });
+  </script>
+
+</body>
+</html>
+
         <span class="storyboard-frame-tag">[ 006 ]</span>
       </div>
       <div class="storyboard-info">
