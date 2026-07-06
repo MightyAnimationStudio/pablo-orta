@@ -539,15 +539,16 @@ nav a.current {
 
 /* ---- Goya film image ---- */
 .about-film {
-  width: 100%;
+  padding: 0 48px;
   margin-bottom: 52px;
   line-height: 0;
+  max-width: 560px;
 }
 
 .about-film-frame {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 5;
   background: #0c0b09;
 }
 
