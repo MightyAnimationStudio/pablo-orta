@@ -1480,7 +1480,6 @@ footer a:hover { color: var(--accent); }
 }
 
 
-}
 
 /* ================================================
    STORYBOARD GRID  (work.html & commercial.html)
@@ -1643,12 +1642,6 @@ footer a:hover { color: var(--accent); }
 
 .storyboard-play-btn svg { fill: var(--muted); transition: fill 0.25s; margin-left: 2px; }
 .storyboard-card:hover .storyboard-play-btn { background: var(--accent); border-color: var(--accent); }
-.storyboard-card:hover .storyboard-play-btn svg { fill: #fff; }
-
-@media (max-width: 768px) {
-  .storyboard-grid { grid-template-columns: 1fr; padding: 16px; gap: 16px; }
-  .storyboard-title { font-size: 24px; }
-}
 .storyboard-card:hover .storyboard-play-btn svg { fill: #fff; }
 
 @media (max-width: 768px) {
