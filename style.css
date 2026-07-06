@@ -537,12 +537,19 @@ nav a.current {
   padding: 0 0 80px;
 }
 
-/* ---- Goya film image ---- */
+/* ---- Intro: image + copy side by side ---- */
+.about-body {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 52px;
+  align-items: start;
+  padding: 48px 48px 56px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+}
+
 .about-film {
-  padding: 0 48px;
-  margin-bottom: 52px;
   line-height: 0;
-  max-width: 560px;
 }
 
 .about-film-frame {
@@ -699,11 +706,11 @@ nav a.current {
   color: var(--text);
   margin-bottom: 22px;
   max-width: 660px;
-  padding: 0 48px;
 }
 
-@media (max-width: 768px) {
-  .about-wrap p { padding: 0 20px; }
+.about-copy p {
+  max-width: 100%;
+  margin-bottom: 20px;
 }
 
 .about-wrap p em { font-style: italic; }
@@ -1558,6 +1565,16 @@ footer a:hover { color: var(--accent); }
 }
 
 
+
+@media (max-width: 768px) {
+  .about-body {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 28px 20px 40px;
+  }
+  .about-film-frame { aspect-ratio: 3 / 2; }
+  .awards-section { padding-left: 20px; padding-right: 20px; }
+}
 
 /* ================================================
    STORYBOARD GRID  (work.html & commercial.html)
