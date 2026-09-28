@@ -998,6 +998,13 @@ nav a.current {
 
 .form-submit:hover { background: var(--accent); }
 
+.contact-form-note {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 @media (max-width: 600px) {
   .form-row { grid-template-columns: 1fr; }
 }
@@ -1614,6 +1621,11 @@ footer a:hover { color: var(--accent); }
 .storyboard-card:nth-child(4) { animation-delay: 290ms; }
 .storyboard-card:nth-child(5) { animation-delay: 370ms; }
 .storyboard-card:nth-child(6) { animation-delay: 450ms; }
+
+.storyboard-card:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
 
 .storyboard-card:hover {
   transform: translateY(-5px);

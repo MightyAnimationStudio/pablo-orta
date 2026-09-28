@@ -60,7 +60,7 @@
 
   <div class="storyboard-grid">
 
-    <div class="storyboard-card is-clickable" data-video="https://storage.googleapis.com/pablo-orta_website/Trolli.mp4">
+    <div class="storyboard-card is-clickable" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Play Sour Brite Crawlers by Trolli" data-video="https://storage.googleapis.com/pablo-orta_website/Trolli.mp4">
       <div class="storyboard-image-wrap">
         <img src="./images/trolli.png" alt="Trolli — Sour Brite Crawlers">
         <span class="storyboard-frame-tag">[ 001 ]</span>
@@ -78,7 +78,7 @@
       </div>
     </div>
 
-    <div class="storyboard-card is-clickable" data-video="https://storage.googleapis.com/pablo-orta_website/Kipp_and_the_Mappadors.mp4">
+    <div class="storyboard-card is-clickable" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Play Kipp and the Mapadors by Vidanta" data-video="https://storage.googleapis.com/pablo-orta_website/Kipp_and_the_Mappadors.mp4">
       <div class="storyboard-image-wrap">
         <img src="./images/kip-mapadores.png" alt="Kipp and the Mapadors">
         <span class="storyboard-frame-tag">[ 002 ]</span>
@@ -96,7 +96,7 @@
       </div>
     </div>
 
-    <div class="storyboard-card is-clickable" data-video="https://storage.googleapis.com/pablo-orta_website/Max_Steel.mp4">
+    <div class="storyboard-card is-clickable" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Play Max Steel by Mattel" data-video="https://storage.googleapis.com/pablo-orta_website/Max_Steel.mp4">
       <div class="storyboard-image-wrap">
         <img src="./images/max-steel.png" alt="Max Steel">
         <span class="storyboard-frame-tag">[ 003 ]</span>
@@ -114,7 +114,7 @@
       </div>
     </div>
 
-    <div class="storyboard-card is-clickable" data-video="https://storage.googleapis.com/pablo-orta_website/League_of_Legends.mp4">
+    <div class="storyboard-card is-clickable" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Play League of Legends by Riot Games" data-video="https://storage.googleapis.com/pablo-orta_website/League_of_Legends.mp4">
       <div class="storyboard-image-wrap">
         <img src="./images/leage-legends.png" alt="League of Legends">
         <span class="storyboard-frame-tag">[ 004 ]</span>
@@ -132,7 +132,7 @@
       </div>
     </div>
 
-    <div class="storyboard-card is-clickable" data-video="https://storage.googleapis.com/pablo-orta_website/Dirt_Conquers.mp4">
+    <div class="storyboard-card is-clickable" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Play Dirt Conquers by Red Bull" data-video="https://storage.googleapis.com/pablo-orta_website/Dirt_Conquers.mp4">
       <div class="storyboard-image-wrap">
         <img src="./images/red-bull.png" alt="Red Bull — Dirt Conquers">
         <span class="storyboard-frame-tag">[ 005 ]</span>
@@ -150,7 +150,7 @@
       </div>
     </div>
 
-    <div class="storyboard-card is-clickable" data-video="https://storage.googleapis.com/pablo-orta_website/Black_Forest.mp4">
+    <div class="storyboard-card is-clickable" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Play Juicy Burst by Black Forest" data-video="https://storage.googleapis.com/pablo-orta_website/Black_Forest.mp4">
       <div class="storyboard-image-wrap">
         <img src="./images/black-forest.png" alt="Black Forest — Juicy Burst">
         <span class="storyboard-frame-tag">[ 006 ]</span>
@@ -171,9 +171,9 @@
   </div>
 
     <!-- Video Modal -->
-  <div id="video-modal" class="modal" role="dialog" aria-modal="true">
+  <div id="video-modal" class="modal" role="dialog" aria-modal="true" aria-label="Commercial video">
     <div class="modal-inner">
-      <button class="modal-close" id="modal-close-btn">Close &#10005;</button>
+      <button class="modal-close" id="modal-close-btn" aria-label="Close video">Close &#10005;</button>
       <video id="modal-video" class="modal-video" controls></video>
     </div>
   </div>
@@ -189,10 +189,26 @@
     const modal = document.getElementById("video-modal");
     const modalVid = document.getElementById("modal-video");
     const closeBtn = document.getElementById("modal-close-btn");
+    let activeCard = null;
+    function openModal(card) {
+      activeCard = card;
+      modalVid.src = card.dataset.video;
+      modal.classList.add("is-open");
+      closeBtn.focus();
+      modalVid.play().catch(() => {});
+    }
     document.querySelectorAll(".is-clickable").forEach(card => {
-      card.addEventListener("click", () => { modalVid.src = card.dataset.video; modal.classList.add("is-open"); modalVid.play(); });
+      card.addEventListener("click", () => openModal(card));
+      card.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(card); }
+      });
     });
-    function closeModal() { modal.classList.remove("is-open"); modalVid.pause(); modalVid.src = ""; }
+    function closeModal() {
+      modal.classList.remove("is-open");
+      modalVid.pause();
+      modalVid.src = "";
+      if (activeCard) activeCard.focus();
+    }
     closeBtn.addEventListener("click", closeModal);
     modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
     document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });

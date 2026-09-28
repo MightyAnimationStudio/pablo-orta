@@ -46,7 +46,7 @@
 
     <!-- Right: form panel -->
     <div class="contact-page-form">
-      <form id="contact-form" class="contact-form" novalidate>
+      <form id="contact-form" class="contact-form">
         <div class="form-row">
           <div class="form-group">
             <label for="name">Name</label>
@@ -65,7 +65,8 @@
           <label for="message">Message</label>
           <textarea id="message" rows="6" placeholder="Your message…" required></textarea>
         </div>
-        <button type="submit" class="form-submit">Send message &rarr;</button>
+        <button type="submit" class="form-submit">Open email app &rarr;</button>
+        <p class="contact-form-note">Your email app will open with the message ready to send.</p>
       </form>
     </div>
 
@@ -86,7 +87,6 @@
       const email   = document.getElementById('email').value.trim();
       const subject = document.getElementById('subject').value.trim() || 'Message from pablo-orta.com';
       const message = document.getElementById('message').value.trim();
-      if (!name || !email || !message) { alert('Please fill in your name, email and message.'); return; }
       const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
       window.location.href = 'mailto:pabloaortaz@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 
