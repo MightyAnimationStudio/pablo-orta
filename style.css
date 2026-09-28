@@ -497,9 +497,9 @@ nav a.current {
    ================================================ */
 
 .about-header {
-  padding-bottom: 52px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 52px;
+  padding: 22px 48px 0;
+  border: 0;
+  margin: 0;
 }
 
 .about-eyebrow {
@@ -513,12 +513,12 @@ nav a.current {
 
 .about-name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(44px, 5.5vw, 68px);
+  font-size: clamp(30px, 3vw, 36px);
   font-weight: 400;
-  line-height: 0.95;
-  letter-spacing: -1px;
+  line-height: 1.05;
+  letter-spacing: -0.2px;
   color: var(--text);
-  margin-bottom: 16px;
+  margin-bottom: 0;
 }
 
 .about-role {
@@ -543,7 +543,7 @@ nav a.current {
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 52px;
   align-items: start;
-  padding: 48px 48px 56px;
+  padding: 22px 48px 56px;
   border-bottom: 1px solid var(--border);
   margin-bottom: 0;
 }
@@ -1574,10 +1574,11 @@ footer a:hover { color: var(--accent); }
 
 
 @media (max-width: 768px) {
+  .about-header { padding: 22px 24px 0; }
   .about-body {
     grid-template-columns: 1fr;
     gap: 28px;
-    padding: 28px 20px 40px;
+    padding: 22px 20px 40px;
   }
   .about-film-frame { aspect-ratio: 3 / 2; }
   .awards-section { padding-left: 20px; padding-right: 20px; }
